@@ -81,7 +81,7 @@
                                 <li><a href="https://www.facebook.com/TAHO786110/"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="https://www.instagram.com/taho_tanzania/"><i class="fab fa-instagram"></i></a></li>
                                 <li><a href="https://mobile.twitter.com/taho_tanzania"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-whatsapp"></i></a></li>
                             </ul>
                             <div class="separator-line-horrizontal-full bg-medium-gray my-1-6 my-xl-1-9"></div>
 
@@ -122,16 +122,7 @@
                 <!-- right sidebar -->
                 <div class="col-lg-3">
                     <div class="side-bar">
-                        <h6 class="h5 mb-3">Search</h6>
-                        <div class="widget search wow fadeInUp" data-wow-delay="200ms">
-                            <form method='post'>
-                                <input type="hidden" name="form-name" value="form 1" />
-                                <input type="search" name="search" placeholder="Type here ...">
-                                <span></span>
-                                <button type="submit" class="butn"><i class="fa fa-search"
-                                        aria-hidden="true"></i></button>
-                            </form>
-                        </div>
+                        
                         <div class="widget wow fadeInUp" data-wow-delay="300ms">
                             <h6 class="h5 mb-3">Categories</h6>
                             <ul class="list-style4">
@@ -159,6 +150,7 @@
                                 <li><a href="https://www.facebook.com/TAHO786110/"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="https://www.instagram.com/taho_tanzania/"><i class="fab fa-instagram"></i></a></li>
                                 <li><a href="https://mobile.twitter.com/taho_tanzania"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://mobile.twitter.com/taho_tanzania"><i class="fab fa-whatsapp"></i></a></li>
                             </ul>
                         </div>
                     </div>

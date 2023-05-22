@@ -11,8 +11,7 @@
                     <h1 class="text-animation" data-in-effect="fadeInRight">Donate Now</h1>
                     <ul>
                         <li><a href="{{ url('/') }}">Home</a></li>
-                        @if ($apeal)
-                            @if ($apeal->id)
+                        
                                 <li><a href="">Donate Now</a></li>
                     </ul>
                 </div>
@@ -36,9 +35,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="p-1-6 p-lg-1-9 border border-color-extra-light-gray rounded">
-                        <p class="font-weight-600 text-primary">How much would you like to donate ?</p>
-
-
+                       
                         <div class="mb-2-5">
                             <p class="font-weight-600 text-primary">Payment Method</p>
                             <div class="clearfix">
@@ -138,7 +135,6 @@
             </div>
         </div>
     </section>
-    @endif
-    @endif
+   
 
 @endsection

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Apeal;
 use App\Models\Blog;
 use App\Models\Causes;
+use App\Models\comments;
 use App\Models\Comment;
 use App\Models\Event;
 use Illuminate\Http\Request;
@@ -68,8 +69,10 @@ class CommentController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $comments = Comment::find($id);
+        $comments->delete();
+        return redirect('admin/comment')->with('messegae', 'comments Deleted Sucessfully');
     }
 }

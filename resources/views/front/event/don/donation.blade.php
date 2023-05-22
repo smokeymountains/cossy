@@ -11,9 +11,10 @@
                     <h1 class="text-animation" data-in-effect="fadeInRight">Donate Now</h1>
                     <ul>
                         <li><a href="{{ url('/') }}">Home</a></li>
-                        @if ($event)
-                            @if ($event->id)
+                        @if ($events)
+                            @if ($events->id)
                                 <li><a href="">Donate Now</a></li>
+                                
                     </ul>
                 </div>
             </div>

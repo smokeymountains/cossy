@@ -473,14 +473,13 @@ input[type=radio] {
     position: relative; }
     .slider-fade.owl-theme .owl-dots .owl-dot:before {
       counter-increment: dots;
-      content: counter(dots,decimal-leading-zero);
+      
       position: absolute;
       right: 0; }
     .slider-fade.owl-theme .owl-dots .owl-dot span {
       background: #fff;
       opacity: 0.3;
-      height: 60px;
-      width: 60px;
+     
       border-radius: 5px;
       margin-left: 20px; }
     .slider-fade.owl-theme .owl-dots .owl-dot.active span {

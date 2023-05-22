@@ -65,18 +65,18 @@ class FaqController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(FaqFormRequest $request, $id)
+    public function update(FaqFormRequest $request)
     {
-        $faqs = Faq::findOrFail($id);
+        
         $val = $request->validated();
         $categories = Categories::findOrFail($val['catId']);
-        if ($faqs) {
+        
             $faqs=$categories->faqs()->update([
                 'question' => $val['message'],
                 'answer' => $request->input('ans'),
                 'status' => $request->status == true ? '1' : '0',
             ]);
-        }
+       
         
         return redirect('admin/faq');
     }

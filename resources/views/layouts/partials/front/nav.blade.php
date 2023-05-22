@@ -7,7 +7,7 @@
                     <div class="top-bar-info">
                         <ul class="ps-0">
                             <li><i class="ti-mobile text-secondary"></i>(+255) 767 291 030</li>
-                            <li class="d-none d-sm-inline-block"><i class="ti-email text-secondary"></i>info@tahotz.com</li>
+                            <li class="d-none d-sm-inline-block"><i class="ti-email text-secondary"></i>info@tahotz.org</li>
                         </ul>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
                         <li><a href="https://www.facebook.com/TAHO786110/"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="https://mobile.twitter.com/taho_tanzania"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="https://www.instagram.com/taho_tanzania/"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-whatsapp"></i></a></li>
                          
                 <li>
                     @if (Route::has('login'))
@@ -47,7 +47,7 @@
 
                             <div class="navbar-header navbar-header-custom" background="black">
                                 <!-- logo -->
-                                <a href="{{ url('') }}" class="navbar-brand logowhite"><img id="logo" src="{{asset('image/TAHO-TZ-1.png')}}" alt="logo">
+                                <a href="{{ url('') }}" class="navbar-brand logoblack"><img id="logo" src="{{asset('image/TAHO-TZ-1.png')}}" alt="logo">
                                    
                                 </a>
                                 <!-- end logo -->
@@ -58,7 +58,7 @@
                             <!-- menu area -->
                             <ul class="navbar-nav ms-auto mt-lg-2" id="nav" style="display: none;">
                                 <li><a href="{{url(' ')}}">Home</a></li>
-                                <li><a href="">About Us</a>
+                                <li><a href="#!">About Us</a>
                                     <ul>
                                  <li><a href="{{url('/about')}}">About us</a></li>
                                         <li><a href="{{url('/whyTaho')}}">Why TAHO?</a></li>
@@ -88,8 +88,8 @@
                             <!-- attribute navigation -->
                             <div class="attr-nav">
                                 <ul>
-                                    <li class="search me-1 me-lg-0"><a href="#!"><i class="fas fa-search"></i></a></li>
-                                    <li class="d-none d-xl-inline-block"><a href="{{url('/volunteer')}}" class="butn theme small text-white">Join us now</a></li>
+                                    
+                                    <li class="d-none d-xl-inline-block"><a href="{{url('/volunteer')}}" class="butn theme small text-white">Donate now</a></li>
                                 </ul>
                             </div>
                             <!-- end attribute navigation -->

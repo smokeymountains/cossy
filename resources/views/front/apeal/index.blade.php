@@ -41,7 +41,7 @@
                             <div class="card card-style1 border-color-extra-light-gray h-100">
 
                                 <img src="{{ $item->getFirstMediaUrl('apeal', 'thumb') }}" class="card-img-top"
-                                    alt="... " style="width: 100%; height: 40%" />
+                                    alt="... " />
 
 
                                 <div class="card-body px-1-6 px-sm-1-9 pb-1-9 pt-2-4 position-relative">

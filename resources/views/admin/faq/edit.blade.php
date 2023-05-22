@@ -29,7 +29,7 @@
                         {{ implode('', $errors->all(':message')) }}
                     @endif
                 </div>
-                <form action="{{ url('admin/faq/' . $faqs->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('admin/faq/'.$faqs->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="modal-body">

@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- PAGE TITLE
-                                ================================================== -->
+                                    ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
         data-background="{{ asset('assets/img/banner/page-title-01.jpg') }}">
         <div class="container">
@@ -25,7 +25,7 @@
     </section>
 
     <!-- DONATE NOW
-                                ================================================== -->
+                                    ================================================== -->
     <section>
         <div class="container">
             <div class="section-heading">
@@ -110,7 +110,7 @@
                                             <div class="third">
                                                 <div class="container">
                                                     <div class="row align-items-center">
-                                                         <div class="col-lg-6 order-lg-2 order-1 mb-1-9 mb-lg-0">
+                                                        <div class="col-lg-6 order-lg-2 order-1 mb-1-9 mb-lg-0">
                                                             <img src="{{ asset('image/Flutterwave_Logo.png') }}"
                                                                 alt="..." class="rounded">
                                                         </div>
@@ -127,7 +127,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                           
+
                                         </div>
                                     </div>
                                 </div>

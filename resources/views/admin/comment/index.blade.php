@@ -25,7 +25,7 @@
                 <table id="data-table-combine" class="table table-striped table-bordered align-middle">
                     <thead>
                         <tr>
-                            
+
                             <th class="text-nowrap">Visitor name</th>
                             <th class="text-nowrap">email</th>
                             <th class="text-nowrap">Comment</th>
@@ -38,7 +38,7 @@
                         @if (count($comment) > 0)
                             @foreach ($comment as $item)
                                 <tr class="odd gradeX">
-                                   
+
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->email }}</td>
                                     <td>{{ $item->comment }}</td>
@@ -62,9 +62,15 @@
                                         @endif
                                     </td>
                                     <td style="text-align: center">
-                                        <a href="{{ url('admin/comment/' . $item->id . '/show') }}"
-                                            value="{{ $item->id }}"><i
-                                                class="fa fa-eye fa-lg me-2 ms-n2 text-primary-900"></i><a>
+                                       
+                                                <form action="{{ url('admin/comment/' . $item->id) }}" method="post">
+                                                    @csrf
+                                                    {{ method_field('Delete') }}
+                                                    <button type="submit" value="Delete" name="submit"
+                                                        class="btn btn-default"><i
+                                                            class="fa fa-trash fa-lg  text-danger"></i>
+                                                    </button>
+                                                </form>
 
                                     </td>
                                 </tr>

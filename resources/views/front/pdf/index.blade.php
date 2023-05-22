@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- PAGE TITLE
-                                    ================================================== -->
+                                                ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
         data-background="{{ asset('assets/img/banner/page-title-01.jpg') }}">
         <div class="container">
@@ -23,7 +23,7 @@
     </section>
 
     <!-- FAQ
-                                    ================================================== -->
+                                                ================================================== -->
     <section>
         <div class="container">
             <div class="section-heading">
@@ -32,27 +32,40 @@
                 <h2 class="mb-0">Download and Read Testimonies for different apeals</h2>
             </div>
 
-            @if (count($pdf))
-                @foreach ($pdf as $item)
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link main-font fw-bold" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    {{ $item->Title }}
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordion">
-                            <div class="card-body">
-                                <a href="{{ url('pdf/' . $item->id) }}">(PDF)</a>
-                                {!! $item->Descr !!}
-                            </div>
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-12">
+                        <div id="accordion" class="accordion-style">
+                            @if (count($pdf))
+                                @foreach ($pdf as $item)
+                                    <div class="card">
+                                        <div class="card-header" id="heading{{ $loop->iteration }}">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link main-font fw-bold" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapse{{ $loop->iteration }}" aria-expanded="true"
+                                                    aria-controls="collapse{{ $loop->iteration }}">
+                                                    {{ $item->Title }}
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse{{ $loop->iteration }}" class="collapse show"
+                                            aria-labelledby="heading{{ $loop->iteration }}" data-bs-parent="#accordion">
+                                            <div class="card-body">
+                                                {!! $item->Descr !!}<a href="{{ url('pdf/' . $item->id) }}" class="butn default">Download <i
+                                                        class="fa fa-download"></i></a></button>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endif
+
                         </div>
                     </div>
-                @endforeach
-            @endif
+                </div>
+            </div>
+
         </div>
     </section>
 @endsection

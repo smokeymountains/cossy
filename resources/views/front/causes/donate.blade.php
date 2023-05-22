@@ -110,17 +110,12 @@
                                     <ul class="list-style4">
                                         @if (count($categories))
                                         @foreach ($categories as $item)
-                                            <li><a href="#!"><i class="fas fa-angle-right me-2"></i>{{ $item->Title }}</a></li>
+                                            <li><a href="{{ url('categories/'.$item->id) }}"><i class="fas fa-angle-right me-2"></i>{{ $item->Title }}</a></li>
                                         @endforeach
                                             
                                         @endif
                                         
-                                    <!--    <li><a href="#!"><i class="fas fa-angle-right me-2"></i>Education</a></li>
-                                        <li><a href="#!"><i class="fas fa-angle-right me-2"></i>Fundraising</a></li>
-                                        <li><a href="#!"><i class="fas fa-angle-right me-2"></i>Organization</a></li>
-                                        <li><a href="#!"><i class="fas fa-angle-right me-2"></i>Donation</a></li>
-                                        <li><a href="#!"><i class="fas fa-angle-right me-2"></i>Food</a></li>
-                                        <li><a href="#!"><i class="fas fa-angle-right me-2"></i>Camp</a></li>-->
+                                   
                                     </ul>
                                 </div>
                             
@@ -131,6 +126,7 @@
                                         <li><a href="https://www.facebook.com/TAHO786110/"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="https://mobile.twitter.com/taho_tanzania"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="https://www.instagram.com/taho_tanzania/"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="https://www.instagram.com/taho_tanzania/"><i class="fab fa-whatsapp"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

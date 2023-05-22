@@ -8,15 +8,17 @@
                 @if ($settings)
                     @foreach ($settings as $item)
                         <div class="text-start item bg-img cover-background pt-6 pb-14 py-md-16 py-lg-20 py-xxl-24 rounded-lg main-font"
-                            data-overlay-dark="6" data-background="{{ $item->getFirstMediaUrl('home', 'thumb') }}">
+                            data-overlay-dark="2" data-background="{{ $item->getFirstMediaUrl('home', 'thumb') }}">
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
                                         <span
                                             class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font text-animations mb-3"
-                                            data-in-effect="fadeInRight">{{ $item->title }}</span>
-                                        <h1>{{ $item->descr }}</h1>
+                                            data-in-effect="fadeInRight"></span>
+                                        
                                         <a href="{{ url('/volunteer') }}" class="butn medium">Join Us now</a>
+                                          <a href="{{ url('/donate') }}" class="butn medium">Donate now</a>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -49,10 +51,10 @@
                                 <div class="section-heading mb-4 text-start">
                                     <span
                                         class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                                        data-in-effect="fadeInRight">about us</span>
-                                    <h2 class="mb-0">You can help the poor</h2>
+                                        data-in-effect="fadeInRight">About us</span>
+                                    
                                 </div>
-                                <p>{!! Str::limit($item->descr1, 300) !!}</p>
+                                <p>{!! Str::limit($item->descr1, 200) !!}</p>
                                 <a href="{{ url('about/' . $item->id) }}" class="butn-read"><span>Read More</span></a>
                             </div>
                         </div>
@@ -134,10 +136,11 @@
             <div class="section-heading text-start">
                 <span class="d-block text-secondary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
                     data-in-effect="fadeInRight">our statistics</span>
-                <h2 class="mb-0 text-white">We provide help</h2>
+                <h2 class="mb-0 text-white">We provide joy and smile</h2>
             </div>
             <div class="row mt-n1-9">
                 <div class="col-md-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                    
                     <div class="counter-style1 bg-primary">
                         <div class="counter-text">
                             <span class="countup mb-0 h1 text-white">
@@ -336,6 +339,7 @@
                                 a
                                 vibrant destiny of the underprivileged children</h2>
                             <a href="{{ url('/volunteer') }}" class="butn secondary">Join us Now</a>
+                            <a href="{{ url('/donate') }}" class="butn secondary">Donate Now</a>
                         </div>
                     </div>
                 </div>

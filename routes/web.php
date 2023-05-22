@@ -61,9 +61,10 @@ Route::get('/gallery', [FrontendController::class, 'galleries']);
 Route::get('/faq', [FrontendController::class, 'faquest']);
 Route::post('/faq', [FrontendController::class, 'faquestion']);
 Route::get('/contact', [FrontendController::class, 'contact']);
+Route::post('/contact', [FrontendController::class, 'contact']);
 Route::get('/pdf', [FrontendController::class, 'pdfs']);
 Route::get('/pdf/{id}', [FrontendController::class, 'pdfshow']);
-
+Route::get('/donate', [FrontendController::class, 'donate']);
 Route::get('/volunteer', [FrontendController::class, 'volunteers']);
 Route::post('/volunteer', [FrontendController::class, 'volunteersRequest']);
 Route::get('/categories', [FrontendController::class, 'categories']);

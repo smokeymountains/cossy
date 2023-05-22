@@ -59,10 +59,9 @@
                                         </td>
 
                                         <td style="text-align: center">
-                                            <a href="{{ url('admin/faq/' . $item->id . '/edit') }}"><i
-                                                    class="fa fa-eye fa-lg me-2 ms-n2 text-primary-900"></i><a>
-                                                    <a href="{{ url('admin/faq/' . $item->id . '/edit') }}"><i
-                                                            class="fa fa-pencil fa-lg me-2 ms-n2 text-success-900"></i><a>
+                                           
+                                                    <a href="{{ url('admin/faq/'.$item->id .'/edit') }}"><i
+                                                            class="fa fa-pencil fa-lg me-2 ms-n2 text-success-900"></i></a>
                                                             <form action="{{ url('admin/faq/' . $item->id) }}"
                                                                 method="post">
                                                                 @csrf

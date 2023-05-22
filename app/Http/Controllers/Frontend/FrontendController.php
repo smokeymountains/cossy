@@ -15,6 +15,7 @@ use App\Http\Requests\volunteer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FaqFormRequest;
 use App\Models\AboutUs;
+use App\Models\Faq;
 use App\Models\General;
 use App\Models\Setting;
 use App\Models\Why;
@@ -63,6 +64,13 @@ class FrontendController extends Controller
       $categories = Categories::all();
       return view('front.categories.index', compact('categories','blog','gen'));
    }
+   public function donate()
+   {
+      $gen = General::all();
+      $blog = Blog::all();
+      $categories = Categories::all();
+      return view('front.donate.index', compact('categories','blog','gen'));
+   }
    public function why()
    {
       $why=Why::all();
@@ -94,7 +102,7 @@ class FrontendController extends Controller
       $blog = Blog::all();
       $events = Event::where('id', $id)->first();
       if ($events) {
-         return view('front.event.don.donation', compact('events', 'blog','gen'));
+         return view('front.event.don.donation', compact('events','blog','gen'));
       } else {
          return back();
       }
@@ -151,8 +159,10 @@ class FrontendController extends Controller
    public function faquest()
    {
       $blog = Blog::all();
+      $events =
+      $faq= Faq::all();
       $categories = Categories::all();
-      return view('front.faq.index', compact('categories', 'blog'));
+      return view('front.faq.index', compact('categories', 'blog','faq'));
       
    }
    public function faquestion(FaqFormRequest $request)
@@ -184,7 +194,8 @@ class FrontendController extends Controller
    public function contact()
    {
       $blog = Blog::all();
-      return view('front.contact.index',compact('blog'));
+      $categories = Categories::all();
+      return view('front.contact.index',compact('blog','categories'));
    }
 
    public function causesView()

@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- PAGE TITLE
-                ================================================== -->
+                    ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
         data-background="img/banner/page-title-01.jpg">
         <div class="container">
@@ -23,7 +23,7 @@
     </section>
 
     <!-- BLOG DETAILS
-                ================================================== -->
+                    ================================================== -->
     <section class="blogs">
         <div class="container">
             <div class="row">
@@ -50,7 +50,8 @@
                                             </li>
                                             <li>
                                                 <a href="#!">
-                                                    <i class="fa fa-calendar me-1 text-secondary"></i> {{ $blog->created_at->diffForHumans() }}
+                                                    <i class="fa fa-calendar me-1 text-secondary"></i>
+                                                    {{ $blog->created_at->diffForHumans() }}
                                                 </a>
                                             </li>
                                             <li>
@@ -60,7 +61,8 @@
                                             </li>
                                             <li>
                                                 <a href="#!">
-                                                    <i class="fa fa-comments me-1 text-secondary"></i> {{ count($blog->comments) }} Comments
+                                                    <i class="fa fa-comments me-1 text-secondary"></i>
+                                                    {{ count($blog->comments) }} Comments
                                                 </a>
                                             </li>
                                         </ul>
@@ -96,23 +98,23 @@
                                     <h3
                                         class="display-26 display-md-25 display-xl-24 text-secondary mb-1-6 font-weight-600">
                                         Comments({{ count($blog->comments) }})</h3>
-                                        @foreach ($blog->comments as $comment)
-                                             <div class="media mb-1-9 pb-1-9 border-bottom border-color-light-gray">
+                                    @foreach ($blog->comments as $comment)
+                                        <div class="media mb-1-9 pb-1-9 border-bottom border-color-light-gray">
                                             <div class="media-body ms-3 ms-sm-4">
-                                            <h6>{{ $comment->name }}</h6> 
-                                             <span class="text-muted">{{ $comment->created_at->diffForHumans() }}</span>
-                                            <p class="mb-3">{{ $comment->comment }}</p>
-                                            
+                                                <h6>{{ $comment->name }}</h6>
+                                                <span class="text-muted">{{ $comment->created_at->diffForHumans() }}</span>
+                                                <p class="mb-3">{{ $comment->comment }}</p>
+
+                                            </div>
                                         </div>
-                                    </div>
-                                        @endforeach
-                                   
+                                    @endforeach
+
 
 
                                     <!-- form -->
                                     <div>
                                         <h3 class="h4 mb-3">Post a Comment</h3>
-                                        <form  method="POST" action="{{ url('blog/'.$blog->id)}}">
+                                        <form method="POST" action="{{ url('blog/' . $blog->id) }}">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-sm">
@@ -151,19 +153,19 @@
                     <div class="side-bar">
 
                         <div class="widget wow fadeInUp" data-wow-delay="300ms">
-                            <h6 class="h5 mb-3">Check posts by categories</h6>
+                            <h6 class="h5 mb-3">Categories</h6>
                             <ul class="list-style4">
                                 @if (count($categories))
                                     @foreach ($categories as $item)
-                                        <li><a href="#!"><i
+                                        <li><a href="{{ url('categories/'.$item->id) }}"><i
                                                     class="fas fa-angle-right me-2"></i>{{ $item->Title }}</a></li>
                                     @endforeach
                                 @endif
                             </ul>
                         </div>
-                      <div class="widget wow fadeInUp" data-wow-delay="400ms">
-                          
-                                <h6 class="h5 mb-3">Popular Blog Posts</h6>
+                        <div class="widget wow fadeInUp" data-wow-delay="400ms">
+
+                            <h6 class="h5 mb-3">Popular Blog Posts</h6>
                             <div class="media mb-1-6">
                                 <img class="me-3" src="" alt="...">
                                 <div class="media-body align-self-center">
@@ -171,8 +173,8 @@
                                     <small> Comments</small>
                                 </div>
                             </div>
-                            
-                            
+
+
 
                         </div>
 

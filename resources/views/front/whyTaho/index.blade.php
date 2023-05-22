@@ -1,9 +1,11 @@
-@extends('layouts.front')
+@extends('layouts.app')
 @section('content')
     <!-- PAGE TITLE
             ================================================== -->
+                          @if (count($gen) > 0)
+        @foreach ($gen as $item)  
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-        data-background="img/banner/page-title-01.jpg">
+        data-background="{{ $item->getFirstMediaUrl('general', 'thumb') }}">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
@@ -20,6 +22,8 @@
             <span class="square bg-secondary"></span>
         </div>
     </section>
+    @endforeach
+    @endif
     <!-- BLOG DETAILS
          ================================================== -->
          @if (count($why)>0)

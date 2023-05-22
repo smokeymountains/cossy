@@ -116,6 +116,18 @@
                                         </div>
 
                                     </div>
+                                     <div class="col-md-3">
+                                        <div class="mb-2 ">
+                                            <label class="form-label col-form-label col-md-3">End Time</label>
+                                            <div class="input-group bootstrap-timepicker">
+                                                <input id="timepicker2" type="text" class="form-control" name="end" value="{{ $events->end }}"/>
+                                                <span class="input-group-text input-group-addon">
+                                                    <i class="fa fa-clock"></i>
+                                                    <span>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <div class="form-check form-switch mb-2">
