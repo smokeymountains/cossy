@@ -89,7 +89,7 @@
                             <div class="attr-nav">
                                 <ul>
                                     
-                                    <li class="d-none d-xl-inline-block"><a href="{{url('/volunteer')}}" class="butn theme small text-white">Donate now</a></li>
+                                    <li class="d-none d-xl-inline-block"><a href="{{url('/donate')}}" class="butn theme small text-white">Donate now</a></li>
                                 </ul>
                             </div>
                             <!-- end attribute navigation -->

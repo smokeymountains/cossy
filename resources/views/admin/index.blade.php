@@ -121,8 +121,7 @@
                                     <tr>
                                         <th>Date</th>
                                         <th class="hidden-sm text-center"></th>
-                                        <th></th>
-                                        <th></th>
+                                        
                                         <th>User</th>
                                     </tr>
                                 </thead>

@@ -14,7 +14,8 @@
                                     <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mb-1-9 mb-lg-0 py-5">
                                         <span
                                             class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font text-animations mb-3"
-                                            data-in-effect="fadeInRight"></span>
+                                            data-in-effect="fadeInRight"><br><br><br></span>
+                                        <br><br><br>
                                         
                                         <a href="{{ url('/volunteer') }}" class="butn medium">Join Us now</a>
                                           <a href="{{ url('/donate') }}" class="butn medium">Donate now</a>
@@ -68,8 +69,68 @@
                 class="position-absolute right-5 top-75 ani-top-bottom opacity7 d-none d-lg-block">
         </section>
     @endif
+    <!-- SERVICES
+                  
+    ================================================== -->
+    @if (count($categories) > 0)
+    <section>
+        <div class="container">
+            <div class="section-heading">
+                
+                <h2>What we do</h2>
+            </div>
+            <div class="row mt-n1-9">
+
+                @foreach ($categories as $item)
+                    @if ($item->popular == '1')
+                        <div class="col-lg-4 col-md-6 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                            <div class="card card-style2 border-0">
+                                <div class="card-body px-1-6 px-sm-1-9 py-1-9">
+                                    <div class="mb-1-6">
+                                        <img src="{{ $item->getFirstMediaUrl('images', 'iconthumb') }}" alt="...">
+                                    </div>
+                                    <div>
+                                        <h3 class="h4 mb-3"><a
+                                                href="{{ url('categories/' . $item->id) }}">{{ $item->Title }}</a>
+                                        </h3>
+                                        <p class="mb-1-6"> {!! $item->metaDescription !!} </p>
+                                        <a href="{{ url('categories/' . $item->id) }}" class="butn-read"><span>Read
+                                                More</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
 
 
+            </div>
+        </div>
+        <img src="{{ asset('assets/img/icons/icon-9.png') }}" alt=""
+            class="position-absolute right-5 top-75 ani-top-bottom opacity7 d-none d-lg-block">
+    </section>
+    @endif
+  <!-- CALL TO ACTION
+                                                                            ================================================== -->
+    @if (count($gen) > 0)
+        @foreach ($gen as $item)
+            <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
+                data-background="{{ $item->getFirstMediaUrl('general', 'thumb') }}" data-overlay-dark="6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-lg-8">
+                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">We aream to
+                                create
+                                a
+                                vibrant destiny of the underprivileged children</h2>
+                            <a href="{{ url('/volunteer') }}" class="butn secondary">Join us Now</a>
+                            <a href="{{ url('/donate') }}" class="butn secondary">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        @endforeach
+    @endif
     <!-- CAUSES
                       @if (count($cause) > 0)
     ================================================== -->
@@ -101,11 +162,7 @@
 
                                     <a href="{{ url('causes/' . $item->id) }}" class="butn-read"><span>Read
                                             More</span></a>
-                                    <!--<div class="skills mb-1-9">
-                                                                        <div class="skills-progress">
-                                                                            <span data-value='50%'></span>
-                                                                        </div>
-                                                                    </div>-->
+                                   
                                 </div>
                                 <div class="d-flex justify-content-between py-3 px-1-6 px-sm-1-9 bg-white card-footer">
                                     <p class="mb-0">
@@ -128,49 +185,27 @@
         </div>
     </section>
     @endif
-    <!-- COUNTER
+      <!-- CALL TO ACTION
                                                                             ================================================== -->
-    <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-        data-background="img/bg/bg-1.jpg">
-        <div class="container">
-            <div class="section-heading text-start">
-                <span class="d-block text-secondary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">our statistics</span>
-                <h2 class="mb-0 text-white">We provide joy and smile</h2>
-            </div>
-            <div class="row mt-n1-9">
-                <div class="col-md-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="200ms">
-                    
-                    <div class="counter-style1 bg-primary">
-                        <div class="counter-text">
-                            <span class="countup mb-0 h1 text-white">
-                                356</span>
+    @if (count($gen) > 0)
+        @foreach ($gen as $item)
+            <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
+                data-background="{{ $item->getFirstMediaUrl('general', 'thumb') }}" data-overlay-dark="6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-lg-8">
+                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">We aream to
+                                create
+                                a
+                                vibrant destiny of the underprivileged children</h2>
+                            <a href="{{ url('/volunteer') }}" class="butn secondary">Join us Now</a>
+                            <a href="{{ url('/donate') }}" class="butn secondary">Donate Now</a>
                         </div>
-                        <p class="display-28 letter-spacing-1 mb-0 text-white">Featured Campaign</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="400ms">
-                    <div class="counter-style1 bg-secondary">
-                        <div class="counter-text">
-                            <span class="countup mb-0 h1 text-white">
-                                149</span>
-                        </div>
-                        <p class="display-28 letter-spacing-1 mb-0 text-dark">Dedicated Volunteers</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mt-1-9 wow fadeIn" data-wow-delay="600ms">
-                    <div class="counter-style1">
-                        <div class="counter-text">
-                            <span class="countup mb-0 text-dark h1 alt-font">
-                                7625</span>
-                        </div>
-                        <p class="display-28 letter-spacing-1 mb-0 text-dark">Happy People</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+            </section>
+        @endforeach
+    @endif
 
 
     <!-- Apeals
@@ -220,47 +255,7 @@
         </div>
     </section>
     @endif
-    <!-- SERVICES
-                  @if (count($categories) > 0)
-    ================================================== -->
-    <section>
-        <div class="container">
-            <div class="section-heading">
-                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">Why The Awaited One Hand Organaization</span>
-                <h2>What we do</h2>
-            </div>
-            <div class="row mt-n1-9">
 
-                @foreach ($categories as $item)
-                    @if ($item->popular == '1')
-                        <div class="col-lg-4 col-md-6 mt-1-9 wow fadeIn" data-wow-delay="200ms">
-                            <div class="card card-style2 border-0">
-                                <div class="card-body px-1-6 px-sm-1-9 py-1-9">
-                                    <div class="mb-1-6">
-                                        <img src="{{ $item->getFirstMediaUrl('images', 'iconthumb') }}" alt="...">
-                                    </div>
-                                    <div>
-                                        <h3 class="h4 mb-3"><a
-                                                href="{{ url('categories/' . $item->id) }}">{{ $item->Title }}</a>
-                                        </h3>
-                                        <p class="mb-1-6"> {!! $item->metaDescription !!} </p>
-                                        <a href="{{ url('categories/' . $item->id) }}" class="butn-read"><span>Read
-                                                More</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                @endforeach
-
-
-            </div>
-        </div>
-        <img src="{{ asset('assets/img/icons/icon-9.png') }}" alt=""
-            class="position-absolute right-5 top-75 ani-top-bottom opacity7 d-none d-lg-block">
-    </section>
-    @endif
     <!-- EVENT
                   @if (count($events) > 0)
     ================================================== -->

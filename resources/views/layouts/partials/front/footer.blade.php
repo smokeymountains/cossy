@@ -68,21 +68,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mt-2-9 wow fadeIn" data-wow-delay="800ms">
-                <div class="ps-xl-1-6">
-                    <h3 class="text-secondary h5 mb-1-9">Trending Post</h3>
 
-                    <div class="media ">
-                        <img class="me-3 rounded" src="" alt="...">
-                        <div class="media-body align-self-center">
-                            <h4 class="h6 mb-1"><a href="#!" class="text-white opacity9"></a></h4>
-                            <span class="small text-white opacity9"> Comments</span>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
         </div>
         <div class="footer-bar borders-top border-color-light-white wow fadeIn" data-wow-delay="400ms">
             <div class="row">

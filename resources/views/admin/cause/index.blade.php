@@ -61,8 +61,18 @@
                                             <td class="align-middle">${{ $item->causeGoal }}</td>
                                             <td class="align-middle">${{ $item->availableAmount }}</td>
                                             <td class="align-middle">{{ $item->status }}</td>
-                                            <td class="align-middle">
-                                                {{ $item->popular }}</td>
+                                            <td style="text-align: center">
+                                            @if ($item->popular == 1)
+                                                <span
+                                                    class="badge border border-success text-success px-2 pt-5px pb-5px rounded fs-12px d-inline-flex align-items-center"><i
+                                                        class="fa fa-circle fs-9px fa-fw me-5px"></i> Popular</span>
+                                            @else
+                                                <span
+                                                    class="badge border border-danger text-danger px-2 pt-5px pb-5px rounded fs-12px d-inline-flex align-items-center"><i
+                                                        class="fa fa-circle fs-9px fa-fw me-5px"></i>Not Popular</span>
+                                            @endif
+
+                                        </td>
                                             <td style="text-align: center">
                                                 <a href="{{ url('admin/cause/' . $item->id . '/edit') }}"
                                                     value="{{ $item->id }}"><i
