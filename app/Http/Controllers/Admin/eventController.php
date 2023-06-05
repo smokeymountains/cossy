@@ -7,6 +7,7 @@ use App\Models\Causes;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\eventsFormRequest;
+use App\Models\Categories;
 
 class eventController extends Controller
 {
@@ -16,8 +17,8 @@ class eventController extends Controller
     public function index()
     {
         $event = Event::all();
-        $causes = Causes::all();
-        return view('admin.event.index', compact('event', 'causes'));
+        $categories = Categories::all();
+        return view('admin.event.index', compact('event', 'categories'));
     }
 
     /**
@@ -26,8 +27,8 @@ class eventController extends Controller
     public function create()
     {
         $events = Event::all();
-        $causes = Causes::all();
-        return view('admin.event.add', compact('events', 'causes'));
+        $categories = Categories::all();
+        return view('admin.event.add', compact('events', 'categories'));
     }
 
     /**
@@ -36,8 +37,8 @@ class eventController extends Controller
     public function store(eventsFormRequest $request)
     {
         $val = $request->validated();
-        $causes = Causes::findOrFail($val['cId']);
-        $events = $causes->events()->create($val);
+        $categories = Categories::findOrFail($val['catId']);
+        $events = $categories->events()->create($val);
 
         if ($request->hasFile('image')) {
             $events->addMediaFromRequest('image')->toMediaCollection('events');
@@ -59,8 +60,8 @@ class eventController extends Controller
     public function edit($id)
     {
         $events = Event::findOrFail($id);
-        $causes = Causes::all();
-        return view('admin.event.edit', compact('events', 'causes'));
+        $categories = Categories::all();
+        return view('admin.event.edit', compact('events', 'categories'));
     }
 
     /**

@@ -18,9 +18,8 @@ class Causes extends Model implements HasMedia
         'MetaDescr',
         'Description',
         'slug',
-        'causeGoal',
-        'availableAmount',
         'status',
+        'tag',
         'popular',
     ];
 

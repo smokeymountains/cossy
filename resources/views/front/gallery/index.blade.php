@@ -32,29 +32,14 @@
                 <div class="row">
                     <div class="filtering col-sm-12 text-center">
                         <span data-filter='*' class="active">All</span>
-                        <span data-filter='.charity'>Causes</span>
+                        <span data-filter='.charity'>News</span>
                         <span data-filter='.medical'>Apeal</span>
                         <span data-filter='.education'>Blog</span>
-                        <span data-filter='.other'>Events</span>
+                       
                     </div>
                 </div>
                 <div class="text-center portfolio-gallery-isotope row">
-                    @foreach ($event as $item )
-                        <div class="col-md-6 col-lg-4 mb-1-9 other" data-src="{{ $item->getFirstMediaUrl('events','thumb') }}" data-sub-html="<h4 class='text-white'>Gallery #01</h4>">
-                        <div class="gallery-block">
-                            <img src="{{ $item->getFirstMediaUrl('events','thumb') }}" alt="..." class="rounded">
-                            <div class="gallery-overlay">
-                                <div class="d-table w-100 h-100 overflow-hidden">
-                                    <div class="d-table-cell align-middle">
-                                        <div class="gallery-btn">
-                                            <a href="#!"><i class="ti-zoom-in"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
+                    
                     
                     @foreach ($apeal as $item)
                          <div class="col-md-6 col-lg-4 mb-1-9 medical" data-src="{{ $item->getFirstMediaUrl('apeal','thumb') }}" data-sub-html="<h4 class='text-white'>Gallery #02</h4>">
@@ -107,10 +92,7 @@
                         </div>
                     </div>
                     @endforeach
-                    
-                    
-                   
-                    
+               
                 </div>
             </div>
         </section>

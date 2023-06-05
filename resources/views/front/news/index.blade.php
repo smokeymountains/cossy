@@ -2,16 +2,16 @@
 
 @section('content')
     <!-- PAGE TITLE
-            ================================================== -->
+                ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
         data-background="{{ asset('assets/img/banner/page-title-01.jpg') }}">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <h1 class="text-animation" data-in-effect="fadeInRight">Causes</h1>
+                    <h1 class="text-animation" data-in-effect="fadeInRight">Latest News</h1>
                     <ul>
                         <li><a href="{{ url('') }}">Home</a></li>
-                        <li><a href="#!">Causes</a></li>
+                        <li><a href="#!">News</a></li>
                     </ul>
                 </div>
             </div>
@@ -23,46 +23,37 @@
     </section>
 
     <!-- CAUSES
-            ================================================== -->
+                ================================================== -->
     <section>
         <div class="container">
             <div class="section-heading">
                 <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">our causes</span>
-                <h2>Our causes</h2>
+                    data-in-effect="fadeInRight">News</span>
+
             </div>
             <div class="row mt-n1-9">
                 @if (count($cause) > 0)
                     @foreach ($cause as $item)
-                        <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
-                            <div class="card card-style1 border-color-extra-light-gray h-100">
+                        <div class="row mt-n1-9">
+                            <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                                <div class="card card-style1 border-color-extra-light-gray h-100">
+                                    <img src="{{ $item->getFirstMediaUrl('causes', 'thumb') }}" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body px-1-6 px-sm-1-9 pb-1-9 pt-2-4 position-relative">
 
-                                <img src="{{ $item->getFirstMediaUrl('causes', 'thumb') }}" class="card-img-top"
-                                    alt="... " />
-
-
-                                <div class="card-body px-1-6 px-sm-1-9 pb-1-9 pt-2-4 position-relative">
-                                    <a href="{{ url('front/donate/' . $item->id) }}" class="card-btn">Donate Now</a>
-                                    <h3 class="h4 mb-3"><a href="causes-detail.html">{{ $item->Title }}</a></h3>
-                                    <p class="mb-1-9">{{ Str::limit($item->MetaDescr, 50) }}</p>
-                                    <!-- <div class="skills mb-1-9">
-                                       <div class="skills-progress">
-                                        </div>
-                                    </div>-->
-                                    <a href="{{ url('causes/' . $item->id) }}" class="butn-read"><span>Read More</span></a>
-                                </div>
-                                <div class="d-flex justify-content-between py-3 px-1-6 px-sm-1-9 bg-white card-footer">
-                                    <p class="mb-0">
-                                        <label class="mb-0 font-weight-700">Raised:</label> <span
-                                            class="text-primary">${{ $item->availableAmount }}</span>
-                                    </p>
-                                    <p class="mb-0">
-                                        <label class="mb-0 font-weight-700">Goal:</label> <span
-                                            class="text-primary">${{ $item->causeGoal }}</span>
-                                    </p>
+                                        <div class="text-secondary small font-weight-600"> <span
+                                                class="display-30 font-weight-600"><i
+                                                    class="far fa-calendar-alt me-2 text-secondary"></i><a
+                                                    href="#!">{{ $item->created_at->diffForHumans() }}</a></span></div>
+                                        <h3 class="h4 mb-3"><a href="{{ url('news/' . $item->id) }}">{{ $item->Title }}</a></h3>
+                                        <p>{{ $item->MetaDescr }}</p>
+                                        <a href="{{ url('news/' . $item->id) }}" class="butn-read"><span>Read More</span></a>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
+                      
                     @endforeach
                 @endif
             </div>

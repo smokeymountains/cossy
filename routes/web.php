@@ -40,12 +40,12 @@ use App\Http\Controllers\Frontend\FrontendController;
 //});
 
 Route::get('/', [FrontendController::class, 'index']);
-Route::get('/causes', [FrontendController::class, 'causesView']);
+Route::get('/news', [FrontendController::class, 'causesView']);
 Route::get('/apeal', [FrontendController::class, 'apeals']);
 Route::post('/apeal/{id}', [FrontendController::class, 'ApealsComment']);
-Route::get('/causes/{id}', [FrontendController::class, 'Causedonate']);
-Route::get('/causes/don/{id}', [FrontendController::class, 'Causedonation']);
-Route::post('/causes/{id}', [FrontendController::class, 'CauseComment']);
+Route::get('/news/{id}', [FrontendController::class, 'Causedonate']);
+Route::get('/news/don/{id}', [FrontendController::class, 'Causedonation']);
+Route::post('/news/{id}', [FrontendController::class, 'CauseComment']);
 Route::get('/apeal/don/{id}', [FrontendController::class, 'apealdonation']);
 Route::get('/apeal/{id}', [FrontendController::class, 'apealdonate']);
 Route::get('/about', [FrontendController::class, 'about']);
@@ -86,7 +86,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::resource('/index', DashboardController::class);
     Route::resource('category', CategoryController::class);
-    Route::resource('cause', causeController::class);
+    Route::resource('news', causeController::class);
     Route::resource('apeals', apealController::class);
     Route::resource('pdf', pdfsController::class);
     Route::resource('blog', BlogController::class);

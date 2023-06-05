@@ -17,7 +17,7 @@ class causeController extends Controller
     {
         $causes = Causes::all();
         $categories = Categories::all();
-        return view('admin.cause.index', compact('causes', 'categories'));
+        return view('admin.news.index', compact('causes', 'categories'));
     }
 
     /**
@@ -26,7 +26,7 @@ class causeController extends Controller
     public function create()
     {
         $categories = Categories::all();
-        return view('admin.cause.addCause', compact('categories'));
+        return view('admin.news.addCause', compact('categories'));
     }
 
     /**
@@ -45,11 +45,9 @@ class causeController extends Controller
             'MetaDescr' => $val['metaDescr'],
             'Description' => $val['descr'],
             'slug' => $val['slug'],
-
-            'causeGoal' => $val['causeGoal'],
             'status' => $request->status == true ? '1' : '0',
             'popular' => $request->pop == true ? '1' : '0',
-            'catId'  => $val['catID']
+
 
         ]);
         if ($request->hasFile('image')) {
@@ -74,19 +72,19 @@ class causeController extends Controller
         $cause = Causes::find($id);
 
         $categories = Categories::all();
-        return view('admin.cause.editCause', compact('cause', 'categories'));
+        return view('admin.news.editCause', compact('cause', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(CauseFormRequest $request,$id)
+    public function update(CauseFormRequest $request, $id)
     {
         $val = $request->validated();
 
         $cause = Categories::findOrFail($val['catID'])
             ->causes()->where('id', $id)->first();
-          
+
         if ($cause) {
             $cause->update([
                 'catId' => $val['catID'],
@@ -94,8 +92,7 @@ class causeController extends Controller
                 'MetaDescr' => $val['metaDescr'],
                 'Description' => $val['descr'],
                 'slug' => $val['slug'],
-                'causeGoal' => $val['causeGoal'],
-                'availableAmount' =>$val['availableAmount'],       
+               
                 'status' => $request->status == true ? '1' : '0',
                 'popular' => $request->pop == true ? '1' : '0',
 
@@ -105,8 +102,8 @@ class causeController extends Controller
                 $cause->addMediaFromRequest('image')->usingName($cause->Title)->toMediaCollection('causes');
             }
         }
-       
-        return redirect('admin/cause')->with('message', 'Successfull Update');
+
+        return redirect('admin/news')->with('message', 'Successfull Update');
     }
 
     /**
@@ -117,6 +114,6 @@ class causeController extends Controller
         $causes = Causes::find($id);
         $causes->delete();
         $causes->clearMediaCollection('images');
-        return redirect('admin/cause')->with('messegae', 'causes Deleted Sucessfully');
+        return redirect('admin/news')->with('messegae', 'causes Deleted Sucessfully');
     }
 }

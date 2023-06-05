@@ -22,7 +22,7 @@ class eventsFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'cId' => [
+            'catId' => [
                 'required',
                 'integer'
             ],

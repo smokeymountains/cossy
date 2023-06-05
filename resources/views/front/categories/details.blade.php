@@ -51,7 +51,38 @@
                        
                         </div>
                         <!-- end left content -->
+                <!-- right sidebar -->
+                <div class="col-lg-3">
+                    <div class="side-bar">
 
+                        <div class="widget wow fadeInUp" data-wow-delay="300ms">
+                            <h6 class="h5 mb-3">Categories</h6>
+                            <ul class="list-style4">
+                                @if (count($categoriess))
+                                    @foreach ($categoriess as $item)
+                                        <li><a href="{{ url('categories/'.$item->id) }}"><i
+                                                    class="fas fa-angle-right me-2"></i>{{ $item->Title }}</a></li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                     
+
+                        <div class="widget wow fadeInUp" data-wow-delay="700ms">
+                            <h6 class="h5 mb-3">Follow Us</h6>
+                            <ul class="social-icon-style1">
+
+                                <li><a href="https://www.facebook.com/TAHO786110/"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li><a href="https://mobile.twitter.com/taho_tanzania"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/taho_tanzania/"><i
+                                            class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- end right sidebar -->
                    
                     </div>
                 </div>

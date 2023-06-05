@@ -163,20 +163,7 @@
                                 @endif
                             </ul>
                         </div>
-                        <div class="widget wow fadeInUp" data-wow-delay="400ms">
-
-                            <h6 class="h5 mb-3">Popular Blog Posts</h6>
-                            <div class="media mb-1-6">
-                                <img class="me-3" src="" alt="...">
-                                <div class="media-body align-self-center">
-                                    <h4 class="h6 mb-1"><a href="#!"></a></h4>
-                                    <small> Comments</small>
-                                </div>
-                            </div>
-
-
-
-                        </div>
+                     
 
                         <div class="widget wow fadeInUp" data-wow-delay="700ms">
                             <h6 class="h5 mb-3">Follow Us</h6>

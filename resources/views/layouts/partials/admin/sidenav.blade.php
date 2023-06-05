@@ -120,11 +120,11 @@
                 </a>
             </div>
             <div class="menu-item">
-                <a href="{{ url('admin/cause') }}" class="menu-link">
+                <a href="{{ url('admin/news') }}" class="menu-link">
                     <div class="menu-icon">
                         <i class="fa-solid fa-diagram-project" style="color: #ffffff;"></i>
                     </div>
-                    <div class="menu-text">Causes </div>
+                    <div class="menu-text">News </div>
                 </a>
             </div>
             <div class="menu-item">
@@ -135,14 +135,7 @@
                     <div class="menu-text">Apeals</div>
                 </a>
             </div>
-            <div class="menu-item">
-                <a href="{{ url('admin/pdf') }}" class="menu-link">
-                    <div class="menu-icon">
-                        <i class="fa-solid fa-file-pdf" style="color: #d81818;"></i>
-                    </div>
-                    <div class="menu-text">Testimonies(PDF)</div>
-                </a>
-            </div>
+            
             <div class="menu-item">
                 <a href="{{ url('admin/blog') }}" class="menu-link">
                     <div class="menu-icon">
@@ -159,14 +152,7 @@
                     <div class="menu-text">Users</div>
                 </a>
             </div>
-            <div class="menu-item">
-                <a href="{{ url('admin/event') }}" class="menu-link">
-                    <div class="menu-icon">
-                        <i class="fa-solid fa-calendar-week" style="color: #fdfffd;"></i>
-                    </div>
-                    <div class="menu-text">Events</div>
-                </a>
-            </div>
+            
             <div class="menu-item">
                 <a href="{{ url('admin/gallery') }}" class="menu-link">
                     <div class="menu-icon">

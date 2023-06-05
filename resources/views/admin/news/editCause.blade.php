@@ -5,20 +5,20 @@
             <div>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:;">Admin</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:;">Cause</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:;">Edit Cause</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:;">News</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:;">Edit News</a></li>
                 </ol>
-                <h1 class="page-header mb-0">Edit Cause</h1>
+                <h1 class="page-header mb-0">Edit News</h1>
             </div>
             <div class="ms-auto">
-                <a href="{{ url('admin/cause') }}" class="btn btn-success btn-rounded px-4 rounded-pill">
+                <a href="{{ url('admin/news') }}" class="btn btn-success btn-rounded px-4 rounded-pill">
                     <i class="fa-solid fa-chevron-right " style="color: #fafafa;"></i><i class="fa-solid fa-chevron-right "
                         style="color: #fafafa;"></i> Back</a>
             </div>
         </div>
         <div class="panel panel-inverse">
             <div class="panel-heading">
-                <h4 class="panel-title">Edit-Cause</h4>
+                <h4 class="panel-title">Edit-News</h4>
 
             </div>
             <div class="panel-body">
@@ -27,31 +27,18 @@
                         {{ implode('', $errors->all(':message')) }}
                     @endif
                 </div>
-                <form action="{{ url('admin/cause/' . $cause->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('admin/news/' . $cause->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label">Title</label>
-                                <input type="text" class="form-control" name="title" placeholder="Cause Title"
+                                <input type="text" class="form-control" name="title" placeholder="Heading"
                                     value="{{ $cause->Title }}">
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label class="form-label">Cause Goal</label>
-                                <input type="number" class="form-control" name="causeGoal" placeholder="$0.00"
-                                    value="{{ $cause->causeGoal }}">
-                            </div>
-                        </div>
-                                                <div class="col-md-6">
-                            <div class="mb-3">
-                                <label class="form-label">Donation</label>
-                                <input type="number" class="form-control" name="availableAmount" placeholder="$0.00"
-                                    value="{{ $cause->availableAmount }}">
-                            </div>
-                        </div>
+
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label">Meta Description</label>

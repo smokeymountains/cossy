@@ -5,13 +5,13 @@
             <div>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:;">Admin</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:;">Cause</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:;">Add Cause</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:;">News</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:;">Add News</a></li>
                 </ol>
-                <h1 class="page-header mb-0">Add Cause</h1>
+                <h1 class="page-header mb-0">Add News</h1>
             </div>
             <div class="ms-auto">
-                <a href="{{ url('admin/cause') }}" class="btn btn-success btn-rounded px-4 rounded-pill"><i
+                <a href="{{ url('admin/news') }}" class="btn btn-success btn-rounded px-4 rounded-pill"><i
                         class="fa-solid fa-chevron-right " style="color: #fafafa;"></i><i class="fa-solid fa-chevron-right "
                         style="color: #fafafa;"></i> Back</a>
             </div>
@@ -24,10 +24,10 @@
             <div class="panel panel-inverse">
                 <!-- BEGIN panel-heading -->
                 <div class="panel-heading">
-                    <h4 class="panel-title">Add-Cause</h4>
+                    <h4 class="panel-title">Add-News</h4>
                 </div>
                 <div class="panel-body">
-                    <form action="{{ url('admin/cause') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ url('admin/news') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="modal-body">
                             <div class="alert-warning">
@@ -45,23 +45,16 @@
                                                     <div class="mb-3">
                                                         <label class="form-label">Title</label>
                                                         <input type="text" class="form-control" name="title"
-                                                            placeholder="Cause Title">
+                                                            placeholder="Heading">
 
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Cause Goal</label>
-                                                        <input type="number" class="form-control" name="causeGoal"
-                                                            placeholder="$0.00">
 
-                                                    </div>
-                                                </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
-                                                        <label class="form-label">Short Description</label>
+                                                        <label class="form-label">News Summary</label>
                                                         <input type="text" class="form-control" name="metaDescr"
-                                                            placeholder="Meta Description">
+                                                            placeholder="News Summary">
 
                                                     </div>
                                                 </div>
@@ -75,8 +68,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
-                                                        <label class="form-label col-form-label col-md-3">Select
-                                                            Category</label>
+                                                        <label class="form-label col-form-label col-md-3">News Category</label>
 
                                                         <select class="form-select" name="catID">
 

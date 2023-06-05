@@ -14,7 +14,8 @@
                     <li><a href="https://www.facebook.com/TAHO786110/"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://mobile.twitter.com/taho_tanzania"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="https://www.instagram.com/taho_tanzania/"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="https://wa.me/255767291030"><i class="fab fa-whatsapp"></i></a></li>
+ 
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 mt-2-9 wow fadeIn" data-wow-delay="400ms">

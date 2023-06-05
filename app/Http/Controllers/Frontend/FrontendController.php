@@ -41,7 +41,8 @@ class FrontendController extends Controller
       $gen = General::all();
       $settings = AboutUs::all();
       $blog = Blog::all();
-      return view('front.about.index',compact('blog','settings','gen'));
+      $categories=Categories::all();
+      return view('front.about.index',compact('blog','settings','gen','categories'));
    }
    public function aboutdetails($id)
    {
@@ -83,8 +84,9 @@ class FrontendController extends Controller
    {
       $gen = General::all();
       $blog = Blog::all();
+      $categoriess = Categories::all();
       $categories = Categories::where('id', $id)->first();
-      return view('front.categories.details', compact('categories','blog','gen'));
+      return view('front.categories.details', compact('categories','blog','gen', 'categoriess'));
    }
 
    public function eventDetail($id)
@@ -204,7 +206,7 @@ class FrontendController extends Controller
       $cause = Causes::all();
       $categories = Categories::all();
       if ($cause) {
-         return view('front.causes.index', compact('cause', 'categories','blog'));
+         return view('front.news.index', compact('cause', 'categories','blog'));
       } else {
          return redirect('front/index');
       }
@@ -215,7 +217,7 @@ class FrontendController extends Controller
       $blog=Blog::all();
       $categories = Categories::all();
       if ($cause) {
-         return view('front.causes.donate', compact('cause', 'categories','blog'));
+         return view('front.news.donate', compact('cause', 'categories','blog'));
       } else {
          return redirect('front/index');
       }
@@ -225,7 +227,7 @@ class FrontendController extends Controller
       $blog = Blog::all();
       $cause = Causes::where('id', $id)->first();
       if ($cause) {
-         return view('front.causes.don.donation', compact('cause','blog'));
+         return view('front.news.don.donation', compact('cause','blog'));
       } else {
          return back();
       }

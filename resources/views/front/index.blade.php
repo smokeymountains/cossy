@@ -17,7 +17,7 @@
                                             data-in-effect="fadeInRight"><br><br><br></span>
                                         <br><br><br>
                                         
-                                        <a href="{{ url('/volunteer') }}" class="butn medium">Join Us now</a>
+                                        <a href="{{ url('/volunteer') }}" class="butn medium" >Join Us now</a>
                                           <a href="{{ url('/donate') }}" class="butn medium">Donate now</a>
                                         
                                     </div>
@@ -43,7 +43,7 @@
                                     <img src="{{ $item->getFirstMediaUrl('about1', 'bigthumb') }}" class="rounded tilt"
                                         alt="..." />
                                 </div>
-                                <img src="{{ $item->getFirstMediaUrl('about1', 'thumb') }}"
+                                <img src="{{ $item->getFirstMediaUrl('about2', 'thumb') }}"
                                     class="about-img rounded tilt d-none d-md-inline-block" alt="..." />
                             </div>
                         </div>
@@ -131,59 +131,41 @@
             </section>
         @endforeach
     @endif
-    <!-- CAUSES
+    <!--NEWS
                       @if (count($cause) > 0)
     ================================================== -->
-    <section class="pt-1-6 pt-lg-14 bg-img cover-background" data-background="{{ asset('assets/img/content/map-bg.jpg') }}">
-        <div class="container">
-            <div class="section-heading">
-                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">our causes</span>
-                <h2>Popular causes</h2>
-            </div>
-
-            <div class="row mt-n1-9">
-
-
-                @foreach ($cause as $item)
-                    @if ($item->popular == '1')
-                        <div class="items col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
-                            <div class="card card-style1 border-color-extra-light-gray h-100">
-
-                                <img src="{{ $item->getFirstMediaUrl('causes', 'thumb') }}" class="card-img-top"
-                                    alt="... " />
-
-
-                                <div class="card-body px-1-6 px-sm-1-9 pb-1-9 pt-2-4 position-relative">
-                                    <a href="{{ url('causes/don/' . $item->id) }}" class="card-btn">Donate Now</a>
-                                    <h3 class="h4 mb-3"><a href="{{ url('causes/' . $item->id) }}">{{ $item->Title }}</a>
-                                    </h3>
-                                    <p class="mb-1-9">{{ Str::limit($item->MetaDescr, 50) }}</p>
-
-                                    <a href="{{ url('causes/' . $item->id) }}" class="butn-read"><span>Read
-                                            More</span></a>
-                                   
-                                </div>
-                                <div class="d-flex justify-content-between py-3 px-1-6 px-sm-1-9 bg-white card-footer">
-                                    <p class="mb-0">
-                                        <label class="mb-0 font-weight-700">Raised:</label> <span
-                                            class="text-primary">${{ $item->availableAmount }}</span>
-                                    </p>
-                                    <p class="mb-0">
-                                        <label class="mb-0 font-weight-700">Goal:</label> <span
-                                            class="text-primary">${{ $item->causeGoal }}</span>
-                                    </p>
-                                </div>
+        <!-- NEWS
+        ================================================== -->
+        @foreach ($cause as $item)
+                    <section>
+            <div class="container">
+                <div class="section-heading">
+                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">LATEST</span>
+                    <h2>NEWS</h2>
+                </div>
+                <div class="row mt-n1-9">
+                    <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
+                        <div class="card card-style1 border-color-extra-light-gray h-100">
+                            <img src="{{ $item->getFirstMediaUrl('causes','thumb') }}" class="card-img-top" alt="...">
+                            <div class="card-body px-1-6 px-sm-1-9 pb-1-9 pt-2-4 position-relative">
+                                
+                                <div class="text-secondary small font-weight-600"> <span class="display-30 font-weight-600"><i
+                                            class="far fa-calendar-alt me-2 text-secondary"></i><a
+                                            href="#!">{{ $item->created_at->diffForHumans() }}</a></span></div>
+                                <h3 class="h4 mb-3"><a href="{{ url('news/' . $item->id) }}">{{ $item->Title }}</a></h3>
+                                <p>{{ $item->MetaDescr }}</p>
+                                <a href="{{ url('news/' . $item->id) }}" class="butn-read"><span>Read More</span></a>
                             </div>
                         </div>
-                    @endif
-                @endforeach
-
-
+                    </div>
+                   
+                </div>
+               
             </div>
+        </section>
+        @endforeach
 
-        </div>
-    </section>
+        <!-- end event grid section -->
     @endif
       <!-- CALL TO ACTION
                                                                             ================================================== -->
@@ -256,62 +238,7 @@
     </section>
     @endif
 
-    <!-- EVENT
-                  @if (count($events) > 0)
-    ================================================== -->
-    <section class="pt-0">
-        <div class="container">
-            <div class="section-heading">
-                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">upcoming events</span>
-                <h2>Our events</h2>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-12 order-lg-1 order-2 pe-lg-4">
 
-                    @foreach ($events as $item)
-                        <div class="bg-light p-4 mb-1-9 wow fadeInUp" data-wow-delay="200ms">
-                            <div class="media">
-                                <div class="rounded text-center bg-primary py-3 px-4">
-                                    <span
-                                        class="font-weight-600 text-white mb-0 d-block h4 lh-1">{{ $item->date }}</span>
-                                    <span class="text-white">TAHO</span>
-                                </div>
-                                <div class="ps-1-6 align-self-center media-body">
-                                    <div class="text-secondary small font-weight-600"><i
-                                            class="ti-time me-1"></i>{{ $item->time }} - {{ $item->end }}</div>
-                                    <h4 class="h5"><a href="{{ url('event/' . $item->id) }}">{{ $item->Title }}</a>
-                                    </h4>
-                                    <p class="mb-0">{{ $item->meta }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-
-
-
-                </div>
-                @if ($latestPost)
-                    <div class="col-lg-6 col-md-12 order-lg-2 order-1 mb-1-9 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
-                        <div class="card card-style1 border-color-extra-light-gray h-100">
-                            <img src="{{ $latestPost->getFirstMediaUrl('events', 'thumb') }}" class="card-img-top"
-                                alt="...">
-                            <div class="card-body px-1-6 px-sm-1-9 pb-1-9 pt-2-4 position-relative">
-                                <span class="card-btn">{{ $latestPost->date }}</span>
-                                <div class="mb-2 text-secondary small font-weight-600"><i class="ti-time me-1"></i>
-                                    {{ $latestPost->time }} - {{ $latestPost->end }}</div>
-                                <h3 class="h4 mb-3"><a
-                                        href="{{ url('event/' . $item->id) }}">{{ $latestPost->Title }}</a></h3>
-                                <p>{{ $latestPost->meta }}</p>
-                                <a href="{{ url('event/' . $item->id) }}" class="butn-read"><span>Read More</span></a>
-                            </div>
-                        </div>
-                    </div>
-                @endif
-            </div>
-        </div>
-    </section>
-    @endif
 
 
 
@@ -350,8 +277,8 @@
         <div class="container">
             <div class="section-heading">
                 <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">our blogs</span>
-                <h2>Latest news</h2>
+                    data-in-effect="fadeInRight">BLOG POSTS</span>
+                
             </div>
             <div class="row mt-n1-9">
                 <div class="testimonial-carousel owl-carousel owl-theme">

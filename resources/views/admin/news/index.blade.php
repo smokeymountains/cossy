@@ -5,14 +5,14 @@
             <div>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:;">Admin</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:;">Cause</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:;">News</a></li>
 
                 </ol>
-                <h1 class="page-header mb-0">Cause</h1>
+                <h1 class="page-header mb-0">NEWS</h1>
             </div>
             <div class="ms-auto">
-                <a href="{{ url('admin/cause/create') }}" class="btn btn-success btn-rounded px-4 rounded-pill"><i
-                        class="fa fa-plus fa-lg me-2 ms-n2 text-success-900"></i> Add Cause</a>
+                <a href="{{ url('admin/news/create') }}" class="btn btn-success btn-rounded px-4 rounded-pill"><i
+                        class="fa fa-plus fa-lg me-2 ms-n2 text-success-900"></i> Add News</a>
             </div>
 
         </div>
@@ -32,12 +32,10 @@
                                 <tr>
                                     <th>Image</th>
                                     
-                                    <th class="pt-0 pb-2"width="100%">Short Description</th>
+                                    <th class="pt-0 pb-2"width="100%">News Summary</th>
                                     <th class="pt-0 pb-2">Category</th>
                                     <th class="pt-0 pb-2">Slug</th>
                                     <th class="pt-0 pb-2">Title</th>
-                                    <th class="pt-0 pb-2">Goal</th>
-                                    <th class="pt-0 pb-2">Available</th>
                                     <th class="pt-0 pb-2">Status</th>
                                      <th class="pt-0 pb-2">Popular</th>
                                     <th class="pt-0 pb-2">Action</th>
@@ -58,8 +56,6 @@
                                             <td class="align-middle">{{ $item->category->Title }}</td>
                                             <td class="align-middle">{{ $item->slug }}</td>
                                             <td class="align-middle">{{  $item->Title  }}</td>
-                                            <td class="align-middle">${{ $item->causeGoal }}</td>
-                                            <td class="align-middle">${{ $item->availableAmount }}</td>
                                             <td class="align-middle">{{ $item->status }}</td>
                                             <td style="text-align: center">
                                             @if ($item->popular == 1)
@@ -74,10 +70,10 @@
 
                                         </td>
                                             <td style="text-align: center">
-                                                <a href="{{ url('admin/cause/' . $item->id . '/edit') }}"
+                                                <a href="{{ url('admin/news/' . $item->id . '/edit') }}"
                                                     value="{{ $item->id }}"><i
                                                         class="fa fa-pencil fa-lg me-2 ms-n2 text-success-900"></i><a>
-                                                        <form action="{{url ('admin/cause/'. $item->id ) }}" method="post">
+                                                        <form action="{{url ('admin/news/'. $item->id ) }}" method="post">
                                                 @csrf
                                                 {{ method_field('Delete') }}
                                                 <button type="submit" value="Delete" name="submit" class="btn btn-default"><i

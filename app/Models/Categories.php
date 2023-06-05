@@ -33,6 +33,10 @@ class Categories extends Model implements HasMedia
     {
         return $this->hasMany(Apeal::class, 'catId', 'id');
     }
+    public function events()
+    {
+        return $this->hasMany(Event::class, 'catId', 'id');
+    }
     public function blogposts()
     {
         return $this->hasMany(Blog::class, 'catId', 'id');

@@ -60,9 +60,9 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label col-form-label col-md-3">Select
-                                                Cause</label>
+                                                Category</label>
                                             <select class="form-select" name="cId">
-                                                @foreach ($causes as $item)
+                                                @foreach ($categories as $item)
                                                     <option value="{{ $item->id }}">
                                                         {{ $item->Title }}</option>
                                                 @endforeach

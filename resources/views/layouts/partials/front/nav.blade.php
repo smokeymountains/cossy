@@ -16,7 +16,7 @@
                         <li><a href="https://www.facebook.com/TAHO786110/"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="https://mobile.twitter.com/taho_tanzania"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="https://www.instagram.com/taho_tanzania/"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#!"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="https://wa.me/255767291030"><i class="fab fa-whatsapp"></i></a></li>
                          
                 <li>
                     @if (Route::has('login'))
@@ -64,23 +64,23 @@
                                         <li><a href="{{url('/whyTaho')}}">Why TAHO?</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="{{url('/causes')}}">Causes</a></li>
+                                <li><a href="{{url('/news')}}">News</a></li>
                                 <li><a href="{{url('/apeal')}}">Apeals</a></li>
+                                <li><a href="{{url('/volunteer')}}">Volunteers</a></li>
                                 <li><a href="#!">Other Links</a>
                                     <ul>
-                                        <li><a href="{{url('/categories')}}">Categories</a></li>
-                                        <li><a href="{{url('/volunteer')}}">Volunteer</a></li>
+                                        <li><a href="{{url('/categories')}}">What we do</a></li>
+                                        
                                         <li><a href="{{url('/gallery')}}">Gallery</a></li>
-                                        <li><a href="{{url('/donate')}}">Donate Now</a></li>
+                                        
                                         <li><a href="{{url('/faq')}}">FAQ</a></li>
-                                        <li><a href="{{ url('/pdf') }}">Testimonies</a></li>
+                                       
                                          
                                     </ul>
                                 </li>
-                                <li><a href="{{url('/event')}}">Events</a></li>
-                                <li><a href="{{('/blog')}}">Blog</a>     
-                                </li>
-                                <li><a href="{{url('/contact')}}">Contact Us</a></li>
+                                
+                                <li><a href="{{('/blog')}}">Blog</a></li>
+                               
                                 
                             </ul>
                             <!-- end menu area -->

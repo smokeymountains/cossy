@@ -38,7 +38,7 @@
                             <th class="text-nowrap" style="text-align: center">Venue</th>
                             <th class="text-nowrap" style="text-align: center">Date</th>
                             <th class="text-nowrap" style="text-align: center">Time</th>
-                            <th class="text-nowrap" style="text-align: center">Cause</th>
+                            <th class="text-nowrap" style="text-align: center">Category</th>
                             <th class="text-nowrap" style="text-align: center">Actions</th>
                         </tr>
                     </thead>
@@ -54,7 +54,7 @@
                                     <td>{{ $item->venue }}</td>
                                     <td>{{ $item->date }}</td>
                                     <td>{{ $item->time }}</td>
-                                    <td>{{ $item->causes->Title }}</td>
+                                    <td>{{ $item->categories->Title }}</td>
                                     <td style="text-align: center">
                                         <a href="{{ url('admin/event/'. $item->id . '/edit') }}"><i
                                                 class="fa fa-pencil fa-lg me-2 ms-n2 text-success-900"></i><a>

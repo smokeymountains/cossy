@@ -44,13 +44,7 @@ class CauseFormRequest extends FormRequest
                 'string'
             ],
 
-            'causeGoal' => [
-                'required',
-                'integer'
-            ],
-            'availableAmount'=>[
-                'integer'
-            ]
+           
         ];
     }
 }

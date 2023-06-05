@@ -14,9 +14,9 @@ class Event extends Model implements HasMedia
     protected $table='events';
 
     protected $guarded = [];
-    public function causes()
+    public function category()
     {
-        return $this->belongsTo(Causes::class, 'cId', 'id');
+        return $this->belongsTo(Categories::class, 'catId', 'id');
     }
     public function comments()
     {
