@@ -15,7 +15,7 @@
                             <h1 class="text-animation" data-in-effect="fadeInRight">{{ $apeal->Title }}</h1>
                             <ul>
                                 <li><a href="{{ url('') }}">Home</a></li>
-                                <li><a href="#!">Apeal Description</a></li>
+                                <li><a href="#!">Appeal Description</a></li>
                             </ul>
                         </div>
                     </div>

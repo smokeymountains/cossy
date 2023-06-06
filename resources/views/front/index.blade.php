@@ -16,9 +16,8 @@
                                             class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font text-animations mb-3"
                                             data-in-effect="fadeInRight"><br><br><br></span>
                                         <br><br><br>
-                                        
-                                        <a href="{{ url('/volunteer') }}" class="butn medium" >Join Us now</a>
-                                          <a href="{{ url('/donate') }}" class="butn medium">Donate now</a>
+                                        <br><br><br>
+                                        <br><br><br>
                                         
                                     </div>
                                 </div>
@@ -38,6 +37,10 @@
                 <div class="row align-items-center">
                     @foreach ($about as $item)
                         <div class="col-lg-7 mb-1-9 mb-md-2-9 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
+                            <div class="section-heading ">
+                                    <h2>About us</h2>
+                                    
+                                </div>
                             <div class="about-us pe-lg-5">
                                 <div class="text-center text-md-end">
                                     <img src="{{ $item->getFirstMediaUrl('about1', 'bigthumb') }}" class="rounded tilt"
@@ -49,12 +52,7 @@
                         </div>
                         <div class="col-lg-5 wow fadeIn" data-wow-delay="400ms">
                             <div class="ps-xl-8">
-                                <div class="section-heading mb-4 text-start">
-                                    <span
-                                        class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                                        data-in-effect="fadeInRight">About us</span>
-                                    
-                                </div>
+                                
                                 <p>{!! Str::limit($item->descr1, 200) !!}</p>
                                 <a href="{{ url('about/' . $item->id) }}" class="butn-read"><span>Read More</span></a>
                             </div>
@@ -115,14 +113,11 @@
     @if (count($gen) > 0)
         @foreach ($gen as $item)
             <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
-                data-background="{{ $item->getFirstMediaUrl('general', 'thumb') }}" data-overlay-dark="6">
+                data-background="{{ asset('image/DV2A3267.jpg') }}" data-overlay-dark="6">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-10 col-lg-8">
-                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">We aream to
-                                create
-                                a
-                                vibrant destiny of the underprivileged children</h2>
+                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">Your donations help the needy improve their health.<h2>
                             <a href="{{ url('/volunteer') }}" class="butn secondary">Join us Now</a>
                             <a href="{{ url('/donate') }}" class="butn secondary">Donate Now</a>
                         </div>
@@ -172,11 +167,11 @@
     @if (count($gen) > 0)
         @foreach ($gen as $item)
             <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
-                data-background="{{ $item->getFirstMediaUrl('general', 'thumb') }}" data-overlay-dark="6">
+                data-background="{{ asset('image/DV2A3000.JPG')}}" data-overlay-dark="6">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-10 col-lg-8">
-                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">We aream to
+                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">We aim to
                                 create
                                 a
                                 vibrant destiny of the underprivileged children</h2>
@@ -197,9 +192,8 @@
         data-background="{{ asset('assets/img/content/map-bg.jpg') }}">
         <div class="container">
             <div class="section-heading">
-                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">our apeals</span>
-                <h2>Popular apeals</h2>
+              
+                <h2>Popular appeals</h2>
             </div>
 
             <div class="row mt-n1-9">
@@ -256,10 +250,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-10 col-lg-8">
-                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">We aream to
-                                create
-                                a
-                                vibrant destiny of the underprivileged children</h2>
+                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">The giving hand is a thankfull hand.</h2>
                             <a href="{{ url('/volunteer') }}" class="butn secondary">Join us Now</a>
                             <a href="{{ url('/donate') }}" class="butn secondary">Donate Now</a>
                         </div>

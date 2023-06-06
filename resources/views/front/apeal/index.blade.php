@@ -10,10 +10,10 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <h1 class="text-animation" data-in-effect="fadeInRight">Apeal</h1>
+                    <h1 class="text-animation" data-in-effect="fadeInRight">Appeal</h1>
                     <ul>
                         <li><a href="{{ url('') }}">Home</a></li>
-                        <li><a href="#!">Apeals</a></li>
+                        <li><a href="#!">Appeals</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,9 +30,8 @@
     <section>
         <div class="container">
             <div class="section-heading">
-                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">our apeals</span>
-                <h2>Our apeals</h2>
+    
+                <h2>Our appeals</h2>
             </div>
             <div class="row mt-n1-9">
                 @if (count($apeal) > 0)

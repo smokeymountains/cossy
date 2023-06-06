@@ -4,7 +4,7 @@
     <!-- PAGE TITLE
                     ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-        data-background="{{ asset('assets/img/banner/page-title-01.jpg') }}">
+        data-background="{{ asset('image/3.jpg') }}">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
@@ -62,7 +62,7 @@
             class="position-absolute left-5 top-15 ani-top-bottom opacity7 d-none d-lg-block">
     </section>
         <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
-        data-background="{{ asset('assets/img/bg/bg-4.jpg') }}" data-overlay-dark="6">
+        data-background="{{ asset('image/20220430_165342.jpg')}}" data-overlay-dark="6">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8 text-center">
@@ -110,7 +110,7 @@
     <!-- CALL TO ACTION
                     ================================================== -->
     <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
-        data-background="{{ asset('assets/img/bg/bg-4.jpg') }}" data-overlay-dark="6">
+        data-background="{{ asset('image/5.jpg')}}" data-overlay-dark="6">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8 text-center">

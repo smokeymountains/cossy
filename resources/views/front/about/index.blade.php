@@ -6,7 +6,7 @@
     @foreach ($gen as $item)
     ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-        data-background="{{ $item->getFirstMediaUrl('general', 'thumb') }}">
+        data-background="{{ asset('image/3.jpg') }}">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
@@ -104,10 +104,9 @@
 
     <!-- CALL TO ACTION
                                     ================================================== -->
-    @if (count($gen) > 0)
-        @foreach ($gen as $item)
+  
             <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
-                data-background="{{ $item->getFirstMediaUrl('general', 'thumb') }}" data-overlay-dark="6">
+                data-background="{{ asset('image/20220430_165342.jpg')}}" data-overlay-dark="6">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-10 col-lg-8 text-center">
@@ -120,8 +119,7 @@
                     </div>
                 </div>
             </section>
-        @endforeach
-    @endif
+  
     @if ($settings)
         @foreach ($settings as $item)
             <section>
