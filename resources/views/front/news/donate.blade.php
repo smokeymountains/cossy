@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- PAGE TITLE
-                    ================================================== -->
+                        ================================================== -->
     @if ($cause)
         @if ($cause->id)
             <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
@@ -38,10 +38,10 @@
                                 <img src="{{ $cause->getFirstMediaUrl('causes', 'bigthumb') }}" class="rounded-top"
                                     alt="...">
                                 <!--  <div class="skills green mb-1-9">
-                                        <div class="skills-progress">
-                                            <span data-value='50%'></span>
-                                        </div>
-                                    </div>-->
+                                            <div class="skills-progress">
+                                                <span data-value='50%'></span>
+                                            </div>
+                                        </div>-->
                             </div>
                             <h2 class="mb-4"></h2>
                             <div class="d-block d-md-flex justify-content-md-between mb-1-9 pb-1-9 border-bottom border-color-extra-light-gray wow fadeIn"
@@ -55,7 +55,9 @@
                                 <h3 class="mb-3 h4">{{ $cause->Title }} </h3>
 
                                 <p>{!! $cause->Description !!}</p>
-
+                                <div class="mt-3 mt-md-0">
+                                    <a href="{{ url('/news/don/' . $cause->id) }}" class="butn medium">Donate Now</a>
+                                </div>
                             </div>
 
                             <!-- form -->
