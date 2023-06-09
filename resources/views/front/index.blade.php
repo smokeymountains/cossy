@@ -171,10 +171,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-10 col-lg-8">
-                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">We aim to
-                                create
-                                a
-                                vibrant destiny of the underprivileged children</h2>
+                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">"The best Way to find your self is to loose yourself in the service of others" - Mahtma Gandhi.</h2>
                             <a href="{{ url('/volunteer') }}" class="butn secondary">Join us Now</a>
                             <a href="{{ url('/donate') }}" class="butn secondary">Donate Now</a>
                         </div>

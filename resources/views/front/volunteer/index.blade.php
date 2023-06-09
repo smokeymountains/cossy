@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <!-- PAGE TITLE
-                    ================================================== -->
+                        ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
         data-background="image/image.png">
         <div class="container">
@@ -22,13 +22,12 @@
     </section>
 
     <!-- VOLUNTEERS
-                    ================================================== -->
+                        ================================================== -->
 
     <section>
         <div class="container">
             <div class="section-heading">
-                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">our team</span>
+
                 <h2>Our volunteers</h2>
             </div>
             @if (count($user) > 0)
@@ -51,6 +50,8 @@
                                                         class="fab fa-twitter"></i></a></li>
                                             <li><a href="https://www.instagram.com/taho_tanzania/"><i
                                                         class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://wa.me/255767291030"><i class="fab fa-whatsapp"></i></a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -65,7 +66,7 @@
 
 
     <!-- BECOME A VOLUNTEERS
-                    ================================================== -->
+                        ================================================== -->
     <section>
         <div class="container">
             <div class="row justify-content-center">

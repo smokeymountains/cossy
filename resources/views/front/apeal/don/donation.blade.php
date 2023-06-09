@@ -4,7 +4,7 @@
     <!-- PAGE TITLE
                                 ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-        data-background="{{ asset('assets/img/banner/page-title-01.jpg') }}">
+        data-background="{{ asset('image/20220607_152121.jpg') }}">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
@@ -24,23 +24,22 @@
         </div>
     </section>
 
+ 
+
     <!-- DONATE NOW
                                 ================================================== -->
     <section>
         <div class="container">
             <div class="section-heading">
-                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">donate</span>
-                <h2 class="mb-0">Make your Donation Here</h2>
+                <p class="font-weight-600 text-primary">"A man true wealth is the good he does in this world"</p>
+               
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="p-1-6 p-lg-1-9 border border-color-extra-light-gray rounded">
-                        <p class="font-weight-600 text-primary">How much would you like to donate ?</p>
-
-
+                       
                         <div class="mb-2-5">
-                            <p class="font-weight-600 text-primary">Payment Method</p>
+                            <p class="font-weight-600 text-primary">Payment Methods</p>
                             <div class="clearfix">
                                 <div class="container">
                                     <div class="horizontaltab tab-style1">

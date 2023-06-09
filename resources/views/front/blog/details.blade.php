@@ -2,9 +2,9 @@
 
 @section('content')
     <!-- PAGE TITLE
-                    ================================================== -->
+                        ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-        data-background="img/banner/page-title-01.jpg">
+        data-background="{{ asset('image/DV2A3158.JPG') }}">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
@@ -23,7 +23,7 @@
     </section>
 
     <!-- BLOG DETAILS
-                    ================================================== -->
+                        ================================================== -->
     <section class="blogs">
         <div class="container">
             <div class="row">
@@ -157,13 +157,13 @@
                             <ul class="list-style4">
                                 @if (count($categories))
                                     @foreach ($categories as $item)
-                                        <li><a href="{{ url('categories/'.$item->id) }}"><i
+                                        <li><a href="{{ url('categories/' . $item->id) }}"><i
                                                     class="fas fa-angle-right me-2"></i>{{ $item->Title }}</a></li>
                                     @endforeach
                                 @endif
                             </ul>
                         </div>
-                     
+
 
                         <div class="widget wow fadeInUp" data-wow-delay="700ms">
                             <h6 class="h5 mb-3">Follow Us</h6>
@@ -173,8 +173,9 @@
                                 </li>
                                 <li><a href="https://mobile.twitter.com/taho_tanzania"><i class="fab fa-twitter"></i></a>
                                 </li>
-                                <li><a href="https://www.instagram.com/taho_tanzania/"><i
-                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/taho_tanzania/"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li><a href="https://wa.me/255767291030"><i class="fab fa-whatsapp"></i></a></li>
                             </ul>
                         </div>
                     </div>

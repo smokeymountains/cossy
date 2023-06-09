@@ -39,17 +39,19 @@ class FrontendController extends Controller
    public function about()
    {
       $gen = General::all();
+      $settingss=Setting::all();
       $settings = AboutUs::all();
       $blog = Blog::all();
       $categories=Categories::all();
-      return view('front.about.index',compact('blog','settings','gen','categories'));
+      return view('front.about.index',compact('blog','settings','gen','categories', 'settingss'));
    }
    public function aboutdetails($id)
    {
+      $settingss = Setting::all();
       $gen = General::all();
       $settings = AboutUs::findOrFail($id);
       $blog = Blog::all();
-      return view('front.about.details', compact('blog', 'settings','gen'));
+      return view('front.about.details', compact('blog', 'settings','gen', 'settingss'));
    }
    public function event()
    {

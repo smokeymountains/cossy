@@ -41,10 +41,10 @@
  <title>TAHO-The Awaited One Hand Organization</title>
 
  <!-- favicon -->
- <link rel="shortcut icon" href="{{asset('assets/img/logos/favicon.png')}}" />
- <link rel="apple-touch-icon" href="{{asset('assets/img/logos/apple-touch-icon-57x57.png')}}" />
- <link rel="apple-touch-icon" sizes="72x72" href="{{asset('assets/img/logos/apple-touch-icon-72x72.png')}}" />
- <link rel="apple-touch-icon" sizes="114x114" href="{{asset('assets/img/logos/apple-touch-icon-114x114.png')}}" />
+ <link rel="shortcut icon" href="{{asset('assets/img/logos/TAHO.png')}}" />
+ <link rel="apple-touch-icon" href="{{asset('assets/img/logos/TAHO.png')}}" />
+ <link rel="apple-touch-icon" sizes="72x72" href="{{asset('assets/img/logos/TAHO.png')}}" />
+ <link rel="apple-touch-icon" sizes="114x114" href="{{asset('assets/img/logos/TAHO.png')}}" />
 
  <!-- plugins -->
  <link rel="stylesheet" href="{{asset('assets/css/plugins.css')}}" />

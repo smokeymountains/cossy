@@ -32,9 +32,7 @@
                         <div class="col-lg-5 mb-1-9 mb-md-2-5 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                             <div>
                                 <div class="section-heading  mb-3 mb-lg-4 text-start">
-                                    <span
-                                        class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                                        data-in-effect="fadeInRight">About Us</span>
+                                    
                                     <h2>About Us</h2>
                                 </div>
                                 <p class="display-29 display-lg-28 font-weight-400 mb-1-6 mb-lg-2-3">{!! $settings->descr1 !!}
@@ -80,18 +78,26 @@
     </section>
 
     <!-- OUR VISION
-                    ================================================== -->
+                                        ================================================== -->
     <section class="pt-0">
         <div class="container">
             <div class="row align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="200ms">
+                    <div class="position-relative">
+                        <img src="{{ asset('image/3.jpg') }}" class="tilt rounded" alt="...">
+                        <div class="position-absolute top-50 start-50 translate-middle">
 
+                            <div class="d-none d-sm-inline-block align-middle font-weight-700 ms-4 text-white text-start">
+                                <span class="text-uppercase d-block"></span></div>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="col-lg-5 offset-xl-1 order-1 order-lg-2 mb-1-9 mb-md-2-5 mb-lg-0 wow fadeIn"
                     data-wow-delay="400ms">
                     <div>
                         <div class="section-heading mb-3 mb-lg-4 text-start align-items-center">
-                            <span
-                                class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation align-items-center"
-                                data-in-effect="fadeInRight">Mission</span>
+                            
                             <h2 align-items-center>Our mission</h2>
                         </div>
                         <p class="display-29 display-lg-28 mb-1-6 mb-lg-2-3">{!! $settings->descr2 !!}</p>
@@ -110,7 +116,7 @@
     <!-- CALL TO ACTION
                     ================================================== -->
     <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
-        data-background="{{ asset('image/5.jpg')}}" data-overlay-dark="6">
+        data-background="{{ asset('image/DV2A3000.JPG')}}" data-overlay-dark="6">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8 text-center">
@@ -131,9 +137,7 @@
             <section>
                 <div class="container">
                     <div class="section-heading">
-                        <span
-                            class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                            data-in-effect="fadeInRight">Vision</span>
+                       
                         <h2>Our Vision</h2>
                     </div>
 
@@ -155,4 +159,5 @@
             </section>
        
     @endif
+    
 @endsection

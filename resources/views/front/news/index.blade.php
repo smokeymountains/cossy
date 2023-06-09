@@ -4,7 +4,7 @@
     <!-- PAGE TITLE
                 ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-        data-background="{{ asset('assets/img/banner/page-title-01.jpg') }}">
+        data-background="{{ asset('image/52.jpg') }}">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">

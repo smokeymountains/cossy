@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- PAGE TITLE
-                             @if (count($gen) > 0)
+                                 @if (count($gen) > 0)
     @foreach ($gen as $item)
     ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
@@ -26,7 +26,7 @@
     @endforeach
     @endif
     <!-- OUR MISSION
-                                    ================================================== -->
+                                        ================================================== -->
     <section>
         <div class="container">
             <div class="row align-items-center">
@@ -35,9 +35,7 @@
                         <div class="col-lg-5 mb-1-9 mb-md-2-5 mb-lg-0 wow fadeIn" data-wow-delay="200ms">
                             <div>
                                 <div class="section-heading  mb-3 mb-lg-4 text-start">
-                                    <span
-                                        class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                                        data-in-effect="fadeInRight">About Us</span>
+                                    
                                     <h2>About Us</h2>
                                 </div>
                                 <p class="display-29 display-lg-28 font-weight-400 mb-1-6 mb-lg-2-3">{!! $item->descr1 !!}
@@ -62,20 +60,35 @@
         <img src="{{ asset('assets/img/icons/icon-7.png') }}" alt=""
             class="position-absolute left-5 top-15 ani-top-bottom opacity7 d-none d-lg-block">
     </section>
-
+        <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
+        data-background="{{ asset('image/DV2A3000.JPG')}}" data-overlay-dark="6">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 text-center">
+                    <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">
+                        Lets get effective to helping the needy together</h2>
+                 <a href="{{ url('/volunteer') }}" class="butn secondary">
+                        <span>Join us Now</span>
+                    </a>
+                    <a href="{{ url('/donate') }}" class="butn secondary">
+                        <span>Donate Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- OUR VISION
-                                    ================================================== -->
+                                        ================================================== -->
     <section class="pt-0">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="200ms">
                     <div class="position-relative">
-                        <div class="col-6 px-1 wow fadeInUp" data-wow-delay="400ms">
-                            <img src="{{ $item->getFirstMediaUrl('about4','hugethumb') }}" class="tilt rounded" alt="...">
-                        </div>
+                        <img src="{{ asset('image/3.jpg') }}" class="tilt rounded" alt="...">
                         <div class="position-absolute top-50 start-50 translate-middle">
 
-
+                            <div class="d-none d-sm-inline-block align-middle font-weight-700 ms-4 text-white text-start">
+                                <span class="text-uppercase d-block"></span></div>
                         </div>
                     </div>
 
@@ -84,9 +97,7 @@
                     data-wow-delay="400ms">
                     <div>
                         <div class="section-heading mb-3 mb-lg-4 text-start align-items-center">
-                            <span
-                                class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation align-items-center"
-                                data-in-effect="fadeInRight">Mission</span>
+                          
                             <h2 align-items-center>Our mission</h2>
                         </div>
                         <p class="display-29 display-lg-28 mb-1-6 mb-lg-2-3">{!! $item->descr2 !!}</p>
@@ -103,31 +114,29 @@
 
 
     <!-- CALL TO ACTION
-                                    ================================================== -->
-  
-            <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
-                data-background="{{ asset('image/20220430_165342.jpg')}}" data-overlay-dark="6">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-10 col-lg-8 text-center">
-                            <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">
-                                Lets get effective to helping the needy together</h2>
-                            <a href="{{ url('/volunteer') }}" class="butn secondary">
-                                <span>Join Us Now</span>
-                            </a>
-                        </div>
-                    </div>
+                                        ================================================== -->
+
+    <section class="bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg wow fadeIn" data-wow-delay="200ms"
+        data-background="{{ asset('image/20220430_165342.jpg') }}" data-overlay-dark="6">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 text-center">
+                    <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">
+                        Lets get effective to helping the needy together</h2>
+                    <a href="{{ url('/volunteer') }}" class="butn secondary">
+                        <span>Join Us Now</span>
+                    </a>
                 </div>
-            </section>
-  
+            </div>
+        </div>
+    </section>
+
     @if ($settings)
         @foreach ($settings as $item)
             <section>
                 <div class="container">
                     <div class="section-heading">
-                        <span
-                            class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                            data-in-effect="fadeInRight">Vision</span>
+                       
                         <h2>Our Vision</h2>
                     </div>
 
@@ -150,13 +159,12 @@
         @endforeach
     @endif
 
-        <!-- CONTACT INFO
-                    ================================================== -->
+    <!-- CONTACT INFO
+                        ================================================== -->
     <section>
         <div class="container">
             <div class="section-heading">
-                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">contact us</span>
+
                 <h2>Get in touch</h2>
             </div>
             <div class="row mb-1-9 mb-md-6 wow fadeIn" data-wow-delay="200ms">
@@ -184,7 +192,8 @@
                                     <!-- Begin Text input element -->
                                     <div class="col-md-6">
                                         <div class="quform-element">
-                                            <label for="email">Your Email <span class="quform-required">*</span></label>
+                                            <label for="email">Your Email <span
+                                                    class="quform-required">*</span></label>
                                             <div class="quform-input">
                                                 <input class="form-control" id="email" type="text" name="email"
                                                     placeholder="Your email here" />
@@ -195,17 +204,17 @@
 
                                     <!-- Begin Text input element -->
                                     <div class="col-md-6">
-                                    <div class="quform-input">
-                                        <select name="catId" class="form-control" id="subject">
-                                            <option value="#">Select your Category here</option>
-                                            @foreach ($categories as $item)
-                                                <option value="{{ $item->id }}">
-                                                    {{ $item->Title }}</option>
-                                            @endforeach
+                                        <div class="quform-input">
+                                            <select name="catId" class="form-control" id="subject">
+                                                <option value="#">Select your Category here</option>
+                                                @foreach ($categories as $item)
+                                                    <option value="{{ $item->id }}">
+                                                        {{ $item->Title }}</option>
+                                                @endforeach
 
-                                        </select>
+                                            </select>
 
-                                    </div>
+                                        </div>
                                     </div>
                                     <!-- End Text input element -->
 
@@ -253,13 +262,13 @@
             <div class="row mt-n1-6">
                 <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="200ms">
                     <div class="p-1-6 text-center border border-color-extra-light-gray rounded h-100">
-                       <i class="fas fa-mobile-alt display-18 mb-1-6 text-primary"></i>
+                        <i class="fas fa-mobile-alt display-18 mb-1-6 text-primary"></i>
                         <h3 class="h5 mb-3">Call us</h3>
                         <span class="d-block mb-2">(+255) 767 291 030</span>
                         <span></span>
                     </div>
                 </div>
-                              
+
                 <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="400ms">
                     <div class="p-1-6 text-center border border-color-extra-light-gray rounded h-100">
                         <i class="fas fa-map-marker-alt display-18 mb-1-6 text-primary"></i>
@@ -281,7 +290,7 @@
     </section>
 
     <!-- IFRAME
-                    ================================================== -->
+                        ================================================== -->
     <section class="p-0">
         <div class="row">
             <div class="col-lg-12">

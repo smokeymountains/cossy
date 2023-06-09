@@ -3,12 +3,11 @@
 @section('content')
 
     <!-- PAGE TITLE
-                    ================================================== -->
+                        ================================================== -->
     @if ($apeal)
         @if ($apeal->id)
-          
             <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-                data-background="{{ asset('assets/img/banner/page-title-01.jpg') }}">
+                data-background="{{ asset('image/20220607_152121.jpg') }}">
                 <div class="container">
                     <div class="row text-center">
                         <div class="col-md-12">
@@ -25,7 +24,6 @@
                     <span class="square bg-secondary"></span>
                 </div>
             </section>
-          
         @endif
     @endif
     @if ($apeal)
@@ -40,10 +38,10 @@
                                 <img src="{{ $apeal->getFirstMediaUrl('apeal', 'bigthumb') }}" class="rounded-top"
                                     alt="...">
                                 <!-- <div class="skills yellow mb-1-9">
-                                        <div class="skills-progress">
-                                            <span data-value='50%'></span>
-                                        </div>
-                                    </div>-->
+                                            <div class="skills-progress">
+                                                <span data-value='50%'></span>
+                                            </div>
+                                        </div>-->
                             </div>
                             <h2 class="mb-4">{{ $apeal->Title }}</h2>
                             <div class="d-block d-md-flex justify-content-md-between mb-1-9 pb-1-9 border-bottom border-color-extra-light-gray wow fadeIn"
@@ -63,7 +61,7 @@
                                 <h3 class="mb-3 h4">DESCRIPTION OF THE APEAL </h3>
 
                                 <p>{!! $apeal->descr !!}</p>
-                             
+
                             </div>
 
                             <!-- form -->
@@ -136,8 +134,7 @@
                                                     class="fab fa-twitter"></i></a></li>
                                         <li><a href="https://www.instagram.com/taho_tanzania/"><i
                                                     class="fab fa-instagram"></i></a></li>
-
-                                        <li><a href="#!"><i class="fab fa-whatsapp"></i></a></li>
+                                        <li><a href="https://wa.me/255767291030"><i class="fab fa-whatsapp"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

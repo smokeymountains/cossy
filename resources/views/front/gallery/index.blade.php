@@ -3,37 +3,21 @@
 @section('content')
         <!-- PAGE TITLE
         ================================================== -->
-        <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4" data-background="{{asset('assets/img/banner/page-title-01.jpg')}}">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-12">
-                        <h1 class="text-animation" data-in-effect="fadeInRight">Gallery</h1>
-                        <ul>
-                            <li><a href="{{url('')}}">Home</a></li>
-                            <li><a href="#!">Gallery</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="position-absolute z-index-1 right bottom-n5 opacity2 ani-left-right">
-                <span class="square bg-primary"></span>
-                <span class="square bg-secondary"></span>
-            </div>
-        </section>
+   
 
         <!-- GALLERY
         ================================================== -->
         <section>
             <div class="container lg-container">
                 <div class="section-heading">
-                    <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation" data-in-effect="fadeInRight">our gallery</span>
+                    
                     <h2>Gallery of our works </h2>
                 </div>
                 <div class="row">
                     <div class="filtering col-sm-12 text-center">
                         <span data-filter='*' class="active">All</span>
                         <span data-filter='.charity'>News</span>
-                        <span data-filter='.medical'>Apeal</span>
+                        <span data-filter='.medical'>Appeals</span>
                         <span data-filter='.education'>Blog</span>
                        
                     </div>

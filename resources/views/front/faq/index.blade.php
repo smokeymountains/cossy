@@ -4,7 +4,7 @@
     <!-- PAGE TITLE
                                 ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-        data-background="{{ asset('assets/img/banner/page-title-01.jpg') }}">
+        data-background="{{ asset('image/DV2A3033.jpg') }}">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
@@ -27,8 +27,7 @@
     <section>
         <div class="container">
             <div class="section-heading">
-                <span class="d-block text-primary display-22 display-md-21 display-lg-20 alt-font wow text-animation"
-                    data-in-effect="fadeInRight">faq</span>
+               
                 <h2 class="mb-0">Ask anything</h2>
             </div>
             <div class="row">
@@ -158,12 +157,11 @@
     <!-- CALL TO ACTION
                                 ================================================== -->
     <section class="bg-img cover-background wow fadeIn secondary-overlay" data-wow-delay="200ms" data-overlay-dark="8"
-        data-background="{{ asset('assets/img/bg/bg-2.jpg') }}">
+        data-background="{{ asset('image/20220607_152515.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-lg-8">
-                    <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">We aream to create a
-                        vibrant destiny of the underprivileged children</h2>
+                    <h2 class="text-white display-16 display-sm-11 display-md-9 display-lg-5 mb-1-9">The Awaited One Hand Organization, Good Health,Love,Happines and Life sustainability is our pride.</h2>
                     <a href="{{ url('/donate') }}" class="butn primary">Donate Now</a>
                 </div>
             </div>

@@ -7,7 +7,7 @@
     @if ($cause)
         @if ($cause->id)
             <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-                data-background="{{ asset('assets/img/banner/page-title-01.jpg') }}">
+                data-background="{{ $cause->getFirstMediaUrl('causes', 'bigthumb') }}">
                 <div class="container">
                     <div class="row text-center">
                         <div class="col-md-12">
@@ -23,6 +23,7 @@
                     <span class="square bg-primary"></span>
                     <span class="square bg-secondary"></span>
                 </div>
+                <br><br><br><br><br><br>
             </section>
         @endif
     @endif

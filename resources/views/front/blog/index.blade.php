@@ -2,13 +2,13 @@
 
 @section('content')
     <!-- PAGE TITLE
-            ================================================== -->
+                ================================================== -->
     <section class="page-title-section bg-img cover-background mx-lg-4 mx-xl-6 rounded-lg" data-overlay-dark="4"
-        data-background="{{ asset('assets/img/banner/page-title-01.jpg') }}">
+        data-background="{{ asset('image/DV2A3158.JPG') }}">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <h1 class="text-animation" data-in-effect="fadeInRight">Blog</h1>
+                    <h1 class="text-animation" data-in-effect="fadeInRight">Blog Posts</h1>
                     <ul>
                         <li><a href="{{ url('') }}">Home</a></li>
                         <li><a href="#!">Blog </a></li>
@@ -23,7 +23,7 @@
     </section>
 
     <!-- BLOG LIST
-            ================================================== -->
+                ================================================== -->
     <section>
         <div class="container">
             <div class="row">
@@ -102,7 +102,6 @@
                             <h6 class="h5 mb-3">Popular Blog Posts</h6>
                             @foreach ($blog as $item)
                                 @if ($item->trending == 1)
-                                    
                                     <div class="media mb-1-6">
                                         <img class="me-3" src="{{ $item->getFirstMediaUrl('blog', 'tinythumb') }}"
                                             alt="...">
@@ -135,6 +134,7 @@
                                 </li>
                                 <li><a href="https://www.instagram.com/taho_tanzania/"><i class="fab fa-instagram"></i></a>
                                 </li>
+                                <li><a href="https://wa.me/255767291030"><i class="fab fa-whatsapp"></i></a></li>
                             </ul>
                         </div>
                     </div>

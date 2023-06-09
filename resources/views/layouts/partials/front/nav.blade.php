@@ -9,8 +9,8 @@
                             <li><i class="ti-mobile text-secondary"></i>(+255) 767 291 030</li>
                             <li class="d-none d-sm-inline-block"><i class="ti-email text-secondary"></i>info@tahotz.org
                             </li>
-                            <li><button><a href="{{ url('/volunteer') }}">Join Us now</a> </button></li>
-                            <li><button style="color:aliceblue;background:-color:green;"><a href="{{ url('/donate') }}">Donate now</a></button></li>
+                            
+                            <li><button style="background-color: #0b4b4b;color: white;border-radius:50rem;padding:5px;border:none;"><a href="{{ url('/donate') }}" style="color:#ffff">Donate now</a></button></li>
                         </ul>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                             <div class="navbar-header navbar-header-custom" background="black">
                                 <!-- logo -->
                                 <a href="{{ url('') }}" class="navbar-brand logoblack"><img id="logo"
-                                        src="{{ asset('image/TAHO-TZ-1.png') }}" alt="logo">
+                                        src="{{ asset('image/TAHO.png') }}" alt="logo">
 
                                 </a>
                                 <!-- end logo -->
