@@ -1,32 +1,4 @@
-/*-----------------------------------------------------------------------------------
-
-    Theme Name: Charity - Nonprofit and Donation Template
-    Description: Nonprofit and Donation Template
-    Author: Chitrakoot Web
-    Version: 1.0
-
-    /* ----------------------------------
-
-    JS Active Code Index
-            
-        01. Preloader
-        02. Scroll To Top
-        03. Wow animation - on scroll
-        04. Parallax
-        05. Video
-        06. Tab Effect
-        07. Resize function
-        08. Progress bar
-        09. FullScreenHeight function
-        10. ScreenFixedHeight function
-        11. FullScreenHeight and screenHeight with resize function
-        12. Sliders
-        13. Tabs
-        14. CountUp
-        15. Countdown
-        16. Isotop
-        
-    ---------------------------------- */    
+  
 
 (function($) {
 
