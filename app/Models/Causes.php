@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use App\Models\Comment;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
@@ -12,6 +13,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Causes extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
+    
     public $fillable = [
         'catId',
         'Title',
@@ -45,4 +47,6 @@ class Causes extends Model implements HasMedia
             ->width(932)
             ->height(532);
     }
+
+    
 }

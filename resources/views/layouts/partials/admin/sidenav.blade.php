@@ -122,7 +122,7 @@
             <div class="menu-item">
                 <a href="{{ url('admin/news') }}" class="menu-link">
                     <div class="menu-icon">
-                        <i class="fa-solid fa-diagram-project" style="color: #ffffff;"></i>
+                        <i class="fa-solid fa-bullhorn" style="color: #ffffff;"></i>
                     </div>
                     <div class="menu-text">News </div>
                 </a>
@@ -132,7 +132,15 @@
                     <div class="menu-icon">
                         <i class="fa-sharp fa-solid fa-group-arrows-rotate" style="color: #ffffff;"></i>
                     </div>
-                    <div class="menu-text">Apeals</div>
+                    <div class="menu-text">Appeals</div>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="{{ url('admin/project') }}" class="menu-link">
+                    <div class="menu-icon">
+                        <i class="fa-sharp fa-solid fa-business-time" style="color: #ffffff;"></i>
+                    </div>
+                    <div class="menu-text">Projects</div>
                 </a>
             </div>
             

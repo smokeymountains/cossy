@@ -1,23 +1,26 @@
 <?php
 
 use App\Models\AboutUs;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\whyController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\MailController;
 use App\Http\Controllers\Admin\pdfsController;
 use App\Http\Controllers\Admin\aboutController;
 use App\Http\Controllers\Admin\apealController;
 use App\Http\Controllers\Admin\causeController;
 use App\Http\Controllers\Admin\EmailController;
 use App\Http\Controllers\Admin\eventController;
+
+
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\CommentController;
-
-
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\GeneralController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -69,6 +72,9 @@ Route::get('/volunteer', [FrontendController::class, 'volunteers']);
 Route::post('/volunteer', [FrontendController::class, 'volunteersRequest']);
 Route::get('/categories', [FrontendController::class, 'categories']);
 Route::get('/categories/{id}', [FrontendController::class, 'categoriesdetails']);
+Route::get('/project', [FrontendController::class, 'project']);
+Route::get('/project/{id}', [FrontendController::class, 'details']);
+Route::get('/project/don/{id}', [FrontendController::class, 'projectdonate']);
 Route::get('/whyTaho', [FrontendController::class, 'why']);
 //Auth::routes(['verify' => true]);
 
@@ -94,12 +100,20 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::resource('gallery', GalleryController::class);
     Route::resource('faq', FaqController::class);
     Route::resource('user', UsersController::class);
-    Route::resource('email', EmailController::class);
+   // Route::resource('email', EmailController::class);
     Route::resource('comment', CommentController::class);
     Route::resource('volunteer', VolunteerController::class);
     Route::resource('settings', SettingsController::class);
     Route::resource('about', aboutController::class);
     Route::resource('general', GeneralController::class);
     Route::resource('why', whyController::class);
+    Route::resource('project',ProjectController::class);
+    Route::get('email', [MailController::class,'index']);
+    Route::get('email/compose',[MailController::class,'create']);
+    Route::post('email/compose',[MailController::class,'send']);
+    Route::post('email/{Uid}', [MailController::class, 'del']);
+    Route::get('email/sent', [MailController::class, 'sent']);
+    Route::get('email/details/{Uid}', [MailController::class, 'details']);
+    
 });
 

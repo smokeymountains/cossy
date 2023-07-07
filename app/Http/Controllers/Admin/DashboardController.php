@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Spatie\Analytics\Period;
+use App\Http\Controllers\Controller;
+use Spatie\Analytics\Facades\Analytics;
 
 class DashboardController extends Controller
 {
@@ -13,6 +15,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        //retrieve visitors and page view data for the current day and the last seven days
+       // $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+
+        //retrieve visitors and page views since the 6 months ago
+       // $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::months(6));
         $blog = Blog::all();
         return  view('admin.index',compact('blog'));
     }

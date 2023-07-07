@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class EmailController extends Controller
+class SettingController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.email.index');
+        return view('admin.settings.index');
     }
 
     /**
@@ -20,13 +20,12 @@ class EmailController extends Controller
      */
     public function create()
     {
-        return view('admin.email.add');
+        //
     }
 
-    public function process()
-    {
-        return view('admin.email.process');
-    }
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
         //

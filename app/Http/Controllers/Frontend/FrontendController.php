@@ -17,8 +17,10 @@ use App\Http\Requests\FaqFormRequest;
 use App\Models\AboutUs;
 use App\Models\Faq;
 use App\Models\General;
+use App\Models\Project;
 use App\Models\Setting;
 use App\Models\Why;
+use Illuminate\Pagination\Paginator;
 
 class FrontendController extends Controller
 {
@@ -34,14 +36,17 @@ class FrontendController extends Controller
       $categories = Categories::all();
       $about=AboutUs::all();
       $user=User::all();
-      return view('front.index', compact('cause', 'blog', 'categories', 'apeal', 'events','latestPost','settings', 'about','gen','user'));
+      $project=Project::all();
+      $latestProject = Project::latest()->first();
+      return view('front.index', compact('cause', 'blog', 'categories', 'apeal', 'events','latestPost','settings', 'about','gen','user','project', 'latestProject'));
    }
-   public function about()
+   public function about(AboutUs $view)
    {
       $gen = General::all();
       $settingss=Setting::all();
       $settings = AboutUs::all();
       $blog = Blog::all();
+     // $view->visitsCounter()->increment();
       $categories=Categories::all();
       return view('front.about.index',compact('blog','settings','gen','categories', 'settingss'));
    }
@@ -51,7 +56,8 @@ class FrontendController extends Controller
       $gen = General::all();
       $settings = AboutUs::findOrFail($id);
       $blog = Blog::all();
-      return view('front.about.details', compact('blog', 'settings','gen', 'settingss'));
+      $categories = Categories::all();
+      return view('front.about.details', compact('blog', 'settings','gen', 'settingss','categories'));
    }
    public function event()
    {
@@ -115,7 +121,7 @@ class FrontendController extends Controller
    public function blogpost()
    {
       $blog = Blog::all();
-      $categories=Categories::all();
+      $categories=Categories::latest()->paginate(4);
      
       return view('front.blog.index',compact('blog','categories'));
    }
@@ -205,10 +211,22 @@ class FrontendController extends Controller
    public function causesView()
    {
       $blog = Blog::all();
-      $cause = Causes::all();
+      $cause = Causes::latest()->paginate(12);
       $categories = Categories::all();
       if ($cause) {
          return view('front.news.index', compact('cause', 'categories','blog'));
+      } else {
+         return redirect('front/index');
+      }
+   }
+   
+   public function project()
+   {
+      $blog = Blog::all();
+      $project = Project::latest()->paginate(12);
+      $categories = Categories::all();
+      if ($project) {
+         return view('front.project.index', compact('project', 'categories','blog'));
       } else {
          return redirect('front/index');
       }
@@ -292,7 +310,7 @@ class FrontendController extends Controller
    {
       $gen = General::all();
       $blog = Blog::all();
-      $apeal = Apeal::all();
+      $apeal = Apeal::latest()->paginate(12);
       return view('front.apeal.index', compact('apeal','blog','gen'));
    }
    public function apealdonate($id)
@@ -302,6 +320,28 @@ class FrontendController extends Controller
       $categories = Categories::all();
       if ($apeal) {
          return view('front.apeal.donate', compact('apeal', 'categories','blog'));
+      } else {
+         return redirect('front/index');
+      }
+   }
+   public function projectdonate($id)
+   {
+      $project = Project::where('id', $id)->first();
+      $blog = Blog::all();
+      $categories = Categories::all();
+      if ($project) {
+         return view('front.project.don.donation', compact('project', 'categories', 'blog'));
+      } else {
+         return redirect('front/index');
+      }
+   }
+   public function details($id)
+   {
+      $project = Project::where('id', $id)->first();
+      $blog = Blog::all();
+      $categories = Categories::all();
+      if ($project) {
+         return view('front.project.datails', compact('project', 'categories', 'blog'));
       } else {
          return redirect('front/index');
       }

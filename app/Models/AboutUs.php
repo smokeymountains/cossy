@@ -29,4 +29,4 @@ class AboutUs extends Model implements HasMedia
             ->height(450);
         
     }
-}
+  }

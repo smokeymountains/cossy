@@ -105,3 +105,4 @@
 <script src="{{ asset('assets1/plugins/lightbox2/dist/js/lightbox.min.js') }}"></script>
 <script src="{{ asset('assets1/js/demo/gallery.demo.js') }}"></script>
 <!-- ================== END page-js ================== -->
+<script src="{{ asset('assets1/js/demo/email-inbox.demo.js') }}"></script>

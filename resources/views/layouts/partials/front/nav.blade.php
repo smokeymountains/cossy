@@ -54,8 +54,8 @@
 
                             <div class="navbar-header navbar-header-custom" background="black">
                                 <!-- logo -->
-                                <a href="{{ url('') }}" class="navbar-brand logoblack"><img id="logo"
-                                        src="{{ asset('image/TAHO.png') }}" alt="logo">
+                                <a href="{{ url('') }}" class="navbar-brandnavbar-brand logoblack"><img id="logo"
+                                        src="{{ asset('assets/img/logos/TAHO.png') }}" alt="logo" style="width: 80px;height:80px">
 
                                 </a>
                                 <!-- end logo -->
@@ -74,6 +74,7 @@
                                 </li>
                                 <li><a href="{{ url('/news') }}">News</a></li>
                                 <li><a href="{{ url('/apeal') }}">Appeals</a></li>
+                                <li><a href="{{ url('/project') }}">Projects</a></li>
                                 <li><a href="{{ url('/volunteer') }}">Volunteers</a></li>
                                 <li><a href="#!">Other Links</a>
                                     <ul>

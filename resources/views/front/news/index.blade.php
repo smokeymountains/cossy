@@ -33,8 +33,9 @@
             </div>
             <div class="row mt-n1-9">
                 @if (count($cause) > 0)
-                    @foreach ($cause as $item)
+                   
                         <div class="row mt-n1-9">
+                             @foreach ($cause as $item)
                             <div class="col-md-6 col-lg-4 mt-1-9 wow fadeIn" data-wow-delay="200ms">
                                 <div class="card card-style1 border-color-extra-light-gray h-100">
                                     <img src="{{ $item->getFirstMediaUrl('causes', 'thumb') }}" class="card-img-top"
@@ -51,10 +52,10 @@
                                     </div>
                                 </div>
                             </div>
-
+@endforeach
                         </div>
                       
-                    @endforeach
+                    
                 @endif
             </div>
             <div class="row wow fadeIn" data-wow-delay="400ms">
@@ -62,16 +63,7 @@
                     <!-- pager -->
                     <div class="text-center mt-6 mt-lg-7">
                         <div class="pagination text-extra-dark-gray">
-                            <ul>
-                                <li><a href="#!"><i
-                                            class="fas fa-long-arrow-alt-left me-1 d-none d-sm-inline-block"></i> Prev</a>
-                                </li>
-                                <li class="active"><a href="#!">1</a></li>
-                                <li><a href="#!">2</a></li>
-                                <li><a href="#!">3</a></li>
-                                <li><a href="#!">Next <i
-                                            class="fas fa-long-arrow-alt-right ms-1 d-none d-sm-inline-block"></i></a></li>
-                            </ul>
+                            {{  $cause->links('vendor.pagination.custom') }}
                         </div>
                     </div>
                     <!-- end pager -->

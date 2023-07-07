@@ -12,32 +12,38 @@ use Illuminate\Queue\SerializesModels;
 class TahoMail extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $subject;
+    public $body;
+    public $attachement;
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($subject, $body, $attachement)
     {
-        //
+        $this->subject = $subject;
+        $this->body = $body;
+        $this->$attachement = $$attachement;
     }
-
+public function build(){
+    return $this->markdown('admin.email.Taho');
+}
     /**
      * Get the message envelope.
      */
-    public function envelope(): Envelope
+   /* public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Taho Mail',
+            {{ $subject }};
         );
     }
 
     /**
      * Get the message content definition.
      */
-    public function content(): Content
+   /* public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'admin.email.Taho',
         );
     }
 
@@ -46,8 +52,8 @@ class TahoMail extends Mailable
      *
      * @return array<int, \Illuminate\Mail\Mailables\Attachment>
      */
-    public function attachments(): array
+   /* public function attachments(): array
     {
         return [];
-    }
+    }*/
 }

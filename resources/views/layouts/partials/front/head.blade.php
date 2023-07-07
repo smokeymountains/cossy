@@ -56,6 +56,7 @@
  <link rel="stylesheet" href="{{asset('assets/quform/css/base.css')}}">
 
  <!-- core style css -->
+ 
  <link href="{{asset('assets/css/styles.css')}}" rel="stylesheet" />
 
  <!-- custom style css -->

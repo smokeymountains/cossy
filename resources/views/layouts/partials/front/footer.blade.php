@@ -5,13 +5,14 @@
                 <div class="mb-1-6 w-80 w-md-60 w-lg-80">
                     <img src="{{ asset('image/TAHOfordarkbckgrnd.png') }}" alt="...">
                 </div>
-                <p class="text-white opacity9 font-weight-300 mb-1-9"> "It's not how much we give but how much love we put into giving - Mother Teresa". </p>
+                <p class="text-white opacity9 font-weight-300 mb-1-9"> "It's not how much we give but how much love we
+                    put into giving - Mother Teresa". </p>
                 <ul class="social-icon-style2">
                     <li><a href="https://www.facebook.com/TAHO786110/"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="https://mobile.twitter.com/taho_tanzania"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="https://www.instagram.com/taho_tanzania/"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://wa.me/255767291030"><i class="fab fa-whatsapp"></i></a></li>
- 
+
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 mt-2-9 wow fadeIn" data-wow-delay="400ms">
@@ -63,6 +64,25 @@
                             <span class="d-inline-block w-85 align-top ps-2">(+255) 767 291 030</span>
                         </li>
                     </ul>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-6 mt-2-9 wow fadeIn" data-wow-delay="800ms">
+                <div class="ps-xl-1-6">
+                    <form action="" method="post">
+                        <div class="col-md-9">
+                            <div class="quform-element">
+                                <label for="email">Subscribe Here </label>
+                                <div class="quform-input">
+                                    <input class="form-control" id="email" type="text" name="email"
+                                        placeholder="Your email here" />
+                                </div>
+                            </div>
+                            <div class="quform-submit-inner">
+                                <button class="butn" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
 

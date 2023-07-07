@@ -274,7 +274,7 @@
                         <i class="fas fa-map-marker-alt display-18 mb-1-6 text-primary"></i>
                         <h3 class="h5 mb-3">Visit us</h3>
                         <span class="d-block mb-2">Bukoba ,Kagera</span>
-                        <span>Buganda road</span>
+                        <span>Uganda road</span>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mt-1-6 wow fadeIn" data-wow-delay="600ms">

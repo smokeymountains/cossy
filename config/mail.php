@@ -40,7 +40,7 @@ return [
             'port' => env('MAIL_PORT', 465),
             'from' => [
                 'address' => 'info@tahotz.org',
-                'name' => 'tahotz.org',
+                'name' => 'The Awaited One Hand Organizatio',
             ],
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),

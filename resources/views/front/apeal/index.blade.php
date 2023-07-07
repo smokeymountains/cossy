@@ -61,16 +61,7 @@
                     <!-- pager -->
                     <div class="text-center mt-6 mt-lg-7">
                         <div class="pagination text-extra-dark-gray">
-                            <ul>
-                                <li><a href="#!"><i
-                                            class="fas fa-long-arrow-alt-left me-1 d-none d-sm-inline-block"></i> Prev</a>
-                                </li>
-                                <li class="active"><a href="#!">1</a></li>
-                                <li><a href="#!">2</a></li>
-                                <li><a href="#!">3</a></li>
-                                <li><a href="#!">Next <i
-                                            class="fas fa-long-arrow-alt-right ms-1 d-none d-sm-inline-block"></i></a></li>
-                            </ul>
+                           {{  $apeal->links('vendor.pagination.custom') }}
                         </div>
                     </div>
                     <!-- end pager -->
